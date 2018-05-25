@@ -339,19 +339,21 @@
 
     <!-- Search -->
     
-
-
-    <!-- Swiftype -->
+    <!-- Google -->
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
         <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
             <i class="material-icons mdl-color-text--white" role="presentation">search</i>
         </label>
 
-        <form autocomplete="off" id="search-form" class="mdl-textfield__expandable-holder" action="">
-            <input class="mdl-textfield__input search-input st-default-search-input" type="text" name="q" id="search">
+        <form autocomplete="off" id="search-form" method="get" action="//google.com/search" accept-charset="UTF-8" class="mdl-textfield__expandable-holder" target="_blank">
+            <input class="mdl-textfield__input search-input" type="search" name="q" id="search" placeholder="">
             <label id="search-form-label" class="mdl-textfield__label" for="search"></label>
+
+            <input type="hidden" name="sitesearch" value="http://ssssdl.github.io">
         </form>
     </div>
+
+
 
 
 
@@ -876,16 +878,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
     <!-- Swiftye -->
-    
-        <script type="text/ls-javascript" id="search-swiftype-js-script">
-    (function(w,d,t,u,n,s,e) {w['SwiftypeObject']=n;w[n]=w[n]||function() {
-    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-    })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-    _st('install','','2.0.0');
-</script>
-
     
 
     <!-- Local Search-->

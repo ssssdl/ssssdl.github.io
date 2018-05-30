@@ -45,7 +45,7 @@
     
     <title>
         
-            分类: hello | 
+            Android欢迎界面实现 | 
         
         ssssdl
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Android,xml,Java">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -217,7 +217,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="ssssdl">
-    <meta name="msapplication-starturl" content="http://ssssdl.github.io/categories/hello/">
+    <meta name="msapplication-starturl" content="http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="ssssdl">
@@ -232,13 +232,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://ssssdl.github.io/categories/hello/">
+    <meta property="og:url" content="http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: hello | ssssdl">
+    <meta property="og:title" content="Android欢迎界面实现 | ssssdl">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Android"> <meta property="og:article:tag" content="xml"> <meta property="og:article:tag" content="Java"> 
 
+    
+        <meta property="article:published_time" content="Wed May 30 2018 20:55:28 GMT+0800">
+        <meta property="article:modified_time" content="Wed May 30 2018 20:58:46 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -246,13 +249,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://ssssdl.github.io/categories/hello/index.html" />
+        <link rel="canonical" href="http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/index.html",
+    "headline": "Android欢迎界面实现",
+    "datePublished": "Wed May 30 2018 20:55:28 GMT+0800",
+    "dateModified": "Wed May 30 2018 20:58:46 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "ssssdl",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "ssssdl",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Android,xml,Java",
+    "description": "",
+}
+</script>
 
 
     
@@ -286,98 +319,261 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Android-欢迎界面实现"><span class="post-toc-number">1.</span> <span class="post-toc-text">Android 欢迎界面实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0X00-原理解析"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">0X00 原理解析</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0X01-具体实现"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">0X01 具体实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#优先启动欢迎界面"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">优先启动欢迎界面</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#延时调用主活动"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">延时调用主活动</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0X02-总结"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">0X02 总结</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/05/16/hello-world/">Hello World</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/05/16/hello-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ssssdl's avatar">
-            </div>
-            <div>
-                <strong>ssssdl</strong>
-                <span>5月 16, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/hello/">hello</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Android欢迎界面实现
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>ssssdl</strong>
+        <span>5月 30, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Android/">Android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Java/">Java</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/xml/">xml</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android欢迎界面实现&url=http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/index.html&pic=http://ssssdl.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android欢迎界面实现&url=http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/index.html&via=ssssdl" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=ssssdl&title=Android欢迎界面实现&summary=&pics=http://ssssdl.github.io/img/favicon.png&url=http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Android-欢迎界面实现"><a href="#Android-欢迎界面实现" class="headerlink" title="Android 欢迎界面实现"></a>Android 欢迎界面实现</h1><h2 id="0X00-原理解析"><a href="#0X00-原理解析" class="headerlink" title="0X00 原理解析"></a>0X00 原理解析</h2><blockquote>
+<p>实现方法很多，但基本原理都差不多，就是在你的功能界面之前调用一个欢迎的活动，欢迎活动尽量简单，太复杂好像会引起应用启动时短暂的白屏，然后再欢迎Activity 延时一段时间，跳转到功能界面就可以了  </p>
+</blockquote>
+<h2 id="0X01-具体实现"><a href="#0X01-具体实现" class="headerlink" title="0X01 具体实现"></a>0X01 具体实现</h2><h3 id="优先启动欢迎界面"><a href="#优先启动欢迎界面" class="headerlink" title="优先启动欢迎界面"></a>优先启动欢迎界面</h3><blockquote>
+<p>右键工程建立一个Activity,一阵设计界面后，设置这个活动第一个启动：<br>在AndroidMainifest.xml中：<br>主活动中剪切如下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">... ...</span><br><span class="line">&lt;intent-filter&gt;&lt;!--这四行放在activity标签中代表这个活动是第一个启动--&gt;</span><br><span class="line">    &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;</span><br><span class="line">    &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;</span><br><span class="line">&lt;/intent-filter&gt;&lt;!--end--&gt;</span><br><span class="line">... ...</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>粘贴到欢迎活动中去，结果如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">... ...</span><br><span class="line">&lt;activity android:name=&quot;.MainActivity&quot;</span><br><span class="line">    android:screenOrientation=&quot;portrait&quot;&gt;</span><br><span class="line">    &lt;!--这个是主界面，android:screenOrientation=&quot;portrait&quot;设置只能竖屏--&gt;</span><br><span class="line">&lt;/activity&gt;</span><br><span class="line">&lt;activity android:name=&quot;.Main2Activity&quot;&gt;&lt;!--欢迎界面--&gt;</span><br><span class="line">        &lt;intent-filter&gt;&lt;!--这四行放在activity标签中代表这个活动是第一个启动--&gt;</span><br><span class="line">        &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;</span><br><span class="line">        &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;</span><br><span class="line">    &lt;/intent-filter&gt;&lt;!--end--&gt;</span><br><span class="line">&lt;/activity&gt;</span><br><span class="line">... ...</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>到这里运行程序时就会先调用欢迎界面   </p>
+</blockquote>
+<h3 id="延时调用主活动"><a href="#延时调用主活动" class="headerlink" title="延时调用主活动"></a>延时调用主活动</h3><blockquote>
+<p>直接上代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">import android.content.Intent;</span><br><span class="line">import android.os.Handler;</span><br><span class="line">import android.os.Message;</span><br><span class="line">import android.support.v7.app.AppCompatActivity;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line"></span><br><span class="line">public class Main2Activity extends AppCompatActivity &#123;//欢迎界面</span><br><span class="line">    private Handler handler = new Handler() &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void handleMessage(Message msg) &#123;</span><br><span class="line">            //接收到消息后跳转</span><br><span class="line">            goMain();</span><br><span class="line">            super.handleMessage(msg);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main2);</span><br><span class="line">        //延迟两秒发送消息</span><br><span class="line">        handler.sendEmptyMessageDelayed(0,2000);</span><br><span class="line">    &#125;</span><br><span class="line">    private void goMain() &#123;</span><br><span class="line">        //设定调动MainActivity</span><br><span class="line">        Intent intent=new Intent(this,MainActivity.class);</span><br><span class="line">        startActivity(intent);  //将控制权交给MainActivity</span><br><span class="line">        finish();   //结束</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="0X02-总结"><a href="#0X02-总结" class="headerlink" title="0X02 总结"></a>0X02 总结</h2><blockquote>
+<p>不然可以建立工程的时候先写欢迎Activity 哈哈哈哈哈</p>
+</blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2018/05/30/Android数组-循环批量管理控件/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/05/16/hello-world/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     

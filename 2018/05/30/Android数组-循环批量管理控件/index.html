@@ -45,7 +45,7 @@
     
     <title>
         
-            分类: hello | 
+            Android数组+循环批量管理控件 | 
         
         ssssdl
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Android,Java,代码技巧">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -217,7 +217,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="ssssdl">
-    <meta name="msapplication-starturl" content="http://ssssdl.github.io/categories/hello/">
+    <meta name="msapplication-starturl" content="http://ssssdl.github.io/2018/05/30/Android数组-循环批量管理控件/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="ssssdl">
@@ -232,13 +232,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://ssssdl.github.io/categories/hello/">
+    <meta property="og:url" content="http://ssssdl.github.io/2018/05/30/Android数组-循环批量管理控件/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: hello | ssssdl">
+    <meta property="og:title" content="Android数组+循环批量管理控件 | ssssdl">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Android"> <meta property="og:article:tag" content="Java"> <meta property="og:article:tag" content="代码技巧"> 
 
+    
+        <meta property="article:published_time" content="Wed May 30 2018 21:00:58 GMT+0800">
+        <meta property="article:modified_time" content="Wed May 30 2018 21:03:39 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -246,13 +249,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://ssssdl.github.io/categories/hello/index.html" />
+        <link rel="canonical" href="http://ssssdl.github.io/2018/05/30/Android数组-循环批量管理控件/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://ssssdl.github.io/2018/05/30/Android数组-循环批量管理控件/index.html",
+    "headline": "Android数组+循环批量管理控件",
+    "datePublished": "Wed May 30 2018 21:00:58 GMT+0800",
+    "dateModified": "Wed May 30 2018 21:03:39 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "ssssdl",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "ssssdl",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Android,Java,代码技巧",
+    "description": "",
+}
+</script>
 
 
     
@@ -286,98 +319,265 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Android管理多按钮，资源文件实现"><span class="post-toc-number">1.</span> <span class="post-toc-text">Android管理多按钮，资源文件实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0X00-问题来源"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">0X00 问题来源</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0X01-解决方案"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">0X01 解决方案</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-建立id数组"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">1.建立id数组</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-获取按钮id"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">2.获取按钮id</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-批量监听实现"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">3.批量监听实现</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0X02总结"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">0X02总结</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/05/16/hello-world/">Hello World</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/05/16/hello-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ssssdl's avatar">
-            </div>
-            <div>
-                <strong>ssssdl</strong>
-                <span>5月 16, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/hello/">hello</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Android数组+循环批量管理控件
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>ssssdl</strong>
+        <span>5月 30, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Android/">Android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Java/">Java</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/代码技巧/">代码技巧</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android数组+循环批量管理控件&url=http://ssssdl.github.io/2018/05/30/Android数组-循环批量管理控件/index.html&pic=http://ssssdl.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android数组+循环批量管理控件&url=http://ssssdl.github.io/2018/05/30/Android数组-循环批量管理控件/index.html&via=ssssdl" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ssssdl.github.io/2018/05/30/Android数组-循环批量管理控件/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://ssssdl.github.io/2018/05/30/Android数组-循环批量管理控件/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=ssssdl&title=Android数组+循环批量管理控件&summary=&pics=http://ssssdl.github.io/img/favicon.png&url=http://ssssdl.github.io/2018/05/30/Android数组-循环批量管理控件/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Android管理多按钮，资源文件实现"><a href="#Android管理多按钮，资源文件实现" class="headerlink" title="Android管理多按钮，资源文件实现"></a>Android管理多按钮，资源文件实现</h1><h2 id="0X00-问题来源"><a href="#0X00-问题来源" class="headerlink" title="0X00 问题来源"></a>0X00 问题来源</h2><blockquote>
+<p>最近做了一个Android计算器交Android通识课作业， 感觉按钮控件很多，一个一个写监听太蠢了</p>
+</blockquote>
+<h2 id="0X01-解决方案"><a href="#0X01-解决方案" class="headerlink" title="0X01 解决方案"></a>0X01 解决方案</h2><blockquote>
+<p>看了很多资料，总结加原创</p>
+</blockquote>
+<h3 id="1-建立id数组"><a href="#1-建立id数组" class="headerlink" title="1.建立id数组"></a>1.建立id数组</h3><blockquote>
+<p>string.xml文件建立数组，把所有需要统一管理的控件id写到这里面，比如我是计算器代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">... ...</span><br><span class="line">    &lt;string-array name=&quot;actions_button&quot;&gt;</span><br><span class="line">        &lt;item&gt;@+id/bT0&lt;/item&gt;</span><br><span class="line">        &lt;item&gt;@+id/bT1&lt;/item&gt;</span><br><span class="line">        ....</span><br><span class="line">        &lt;item&gt;@+id/bT15&lt;/item&gt;</span><br><span class="line">    &lt;/string-array&gt;</span><br><span class="line">... ...</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>我还实现了计算器语音播报功能其中每一个按钮对应的语音文件也可以这样管理具体元素代码<code>&lt;item&gt;@raw/num7&lt;/item&gt;</code>  </p>
+</blockquote>
+<h3 id="2-获取按钮id"><a href="#2-获取按钮id" class="headerlink" title="2.获取按钮id"></a>2.获取按钮id</h3><blockquote>
+<p>先建立一个Button的数组<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Button[] btsz = new Button[16];//创建15个按钮的数组</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>在onCreate方法里面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">... ...</span><br><span class="line">TypedArray btidar = getResources().obtainTypedArray(R.array.actions_button);//通过调用string.xml文件中的数组批量管理按钮id</span><br><span class="line">int len = btidar.length();//一共16个按钮</span><br><span class="line">int[] btid = new int[len];</span><br><span class="line">final int[] yinid = new int[len];</span><br><span class="line">for (int i = 0; i &lt; len; i++)&#123;</span><br><span class="line">    btid[i] = btidar.getResourceId(i,0);//获得按钮的id放到btid数组里面，这里可以写成两行</span><br><span class="line">    btsz[i] = (Button)findViewById(btid[i]);//绑定id到按钮</span><br><span class="line">&#125;</span><br><span class="line">... ...</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="3-批量监听实现"><a href="#3-批量监听实现" class="headerlink" title="3.批量监听实现"></a>3.批量监听实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">... ...</span><br><span class="line"> for(int i = 0;i &lt; 16;i++)&#123;//这里原创  哈哈哈哈</span><br><span class="line">            if(i == 14) //等号单独处理</span><br><span class="line">                continue;</span><br><span class="line">            btsz[i].setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">                @Override</span><br><span class="line">                public void onClick(View view) &#123;</span><br><span class="line">                    //这是在另一个类方法里面，不能使用循环变量i，需要辨别当前按钮的话可以使用以下代码</span><br><span class="line">                    ......</span><br><span class="line">                    Button btt = (Button)findViewById(view.getId());//获取当前按钮</span><br><span class="line">                    String str1 = btt.getText().toString();//获取按钮上的文本</span><br><span class="line">                    ......</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">... ...</span><br></pre></td></tr></table></figure>
+<h2 id="0X02总结"><a href="#0X02总结" class="headerlink" title="0X02总结"></a>0X02总结</h2><blockquote>
+<p>这个解决方法不止一种，还可以重写onClick方法，利用view变量获取当前按钮id，然后一个swich就解决了</p>
+</blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2018/05/30/Android全屏/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/05/30/Android欢迎界面实现/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     

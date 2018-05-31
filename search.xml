@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[修改编程背景]]></title>
+    <url>%2F2018%2F05%2F31%2F%E4%BF%AE%E6%94%B9IDE%E8%83%8C%E6%99%AF%2F</url>
+    <content type="text"><![CDATA[修改编程背景很多编程环境都支持，一搜一大片，简单总结一下我常用的VS，AS，myEclipse，VScode 0X00 VScode 搜索安装插件background安装好之后，文件&gt;首选项&gt;设置，搜索&gt;background,在”background.style”上面添加如下代码,第一行设置关闭默认，第二行设置图片路径1234&quot;background.useDefault&quot;: false,&quot;background.customImages&quot;: [ &quot;file:///E:/Pictures/ooYBAFMdVXWIGiLgABHveagp06AAABZVQC-G_QAEe-R438.jpg&quot;], 可能要重启，我忘了。。。就这样吧 0X01 VS 工具&gt;扩展和更新&gt;联机搜索background下载,就一个是一个黄发妹子的图标，算了，截个图吧就是这个安好了之后工具&gt;选项&gt;选择这个caudiaIDE插件一顿设置不用重启就行了 0X02 AS 这个比较简单两个插件+一个网站1.网站：color-themes下载好主题导入设置就可以了2.插件：Material Theme UI 这个插件在setting&gt; Editor&gt; Colors &amp; Fonts设置Sexy Editor 这个在setting&gt; other Setting&gt; Sexy Editor设置比较简单，没啥说的 0X03 myEclipse 这是一个CSDN上大佬原创的，博客原文,他写的是eclipse的修改背景图片，但myEclipse也可以用，甚至比eclpise简单，因为eclipse很多插件要自己弄友情提示：配置这个的时候要注意图片路径 最后附上myEclipse破解：在获取破解码网站输入myeclipse 2017获取破解码，myEclipse中help-&gt;subscription information id填myeclipse 2017，下面写上注册码，后面的邮箱可以写自己的]]></content>
+      <categories>
+        <category>基本操作</category>
+      </categories>
+      <tags>
+        <tag>代码技巧</tag>
+        <tag>环境优化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Android全屏]]></title>
     <url>%2F2018%2F05%2F30%2FAndroid%E5%85%A8%E5%B1%8F%2F</url>
-    <content type="text"><![CDATA[android全屏实现0X00实现 代码如下:style.xml文件中写一个style123&lt;style name=&quot;quanping&quot; parent=&quot;Theme.AppCompat.DayNight.NoActionBar&quot;&gt; &lt;item name=&quot;android:windowFullscreen&quot;&gt;true&lt;/item&gt;&lt;/style&gt; 解释：以上代码parent=&quot;Theme.AppCompat.DayNight.NoActionBar&quot;实现去除标题栏，&lt;item name=&quot;android:windowFullscreen&quot;&gt;true&lt;/item&gt;实现全屏 AndroidMainifest.xml文件中应用该style，在application（对全部活动），或者activity（对单个活动）标签里面添加1android:theme=&quot;@style/quanping&quot; 总结 感觉不是什么特别合理的解决方案，有时间可以学一下沉浸状态栏]]></content>
+    <content type="text"><![CDATA[android全屏实现0X00实现 代码如下:style.xml文件中写一个style123&lt;style name=&quot;quanping&quot; parent=&quot;Theme.AppCompat.DayNight.NoActionBar&quot;&gt; &lt;item name=&quot;android:windowFullscreen&quot;&gt;true&lt;/item&gt;&lt;/style&gt; 解释：以上代码parent=&quot;Theme.AppCompat.DayNight.NoActionBar&quot;实现去除标题栏，&lt;item name=&quot;android:windowFullscreen&quot;&gt;true&lt;/item&gt;实现全屏 AndroidMainifest.xml文件中应用该style，在application（对全部活动），或者activity（对单个活动）标签里面添加1android:theme=&quot;@style/quanping&quot; 0X01总结 感觉不是什么特别合理的解决方案，有时间可以学一下沉浸状态栏]]></content>
       <categories>
         <category>Android</category>
       </categories>
       <tags>
         <tag>Android</tag>
-        <tag>xml</tag>
         <tag>Java</tag>
+        <tag>xml</tag>
       </tags>
   </entry>
   <entry>
@@ -22,8 +34,8 @@
       </categories>
       <tags>
         <tag>Android</tag>
-        <tag>Java</tag>
         <tag>代码技巧</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -35,8 +47,8 @@
       </categories>
       <tags>
         <tag>Android</tag>
-        <tag>xml</tag>
         <tag>Java</tag>
+        <tag>xml</tag>
       </tags>
   </entry>
   <entry>

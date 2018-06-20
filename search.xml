@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>sql语句基础合集</title>
+      <link href="/2018/06/20/sql%E8%AF%AD%E5%8F%A5%E5%9F%BA%E7%A1%80%E5%90%88%E9%9B%86/"/>
+      <url>/2018/06/20/sql%E8%AF%AD%E5%8F%A5%E5%9F%BA%E7%A1%80%E5%90%88%E9%9B%86/</url>
+      <content type="html"><![CDATA[<h1 id="基础整理"><a href="#基础整理" class="headerlink" title="基础整理"></a>基础整理</h1><blockquote><p>整理一波自己以前用的比较基本的sql语句，还有一些MySQL orcale 数据库的操作，</p></blockquote><blockquote><p>不包括设置制约关系，触发器等知识（有时间再整理），就是简单的增删改查等操作，整理的比较随意，将就着看  。。。（有时间还会更新）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">mysql -h127.0.0.1 -u用户名 -p密码 本地打开mysql命令行</span><br><span class="line"></span><br><span class="line">1.更改密码  update user set authentication_string = PASSWORD(&apos;你自己的密码&apos;) where user=&apos;root&apos;;</span><br><span class="line">                 ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;new_password&apos;;</span><br><span class="line">2. 使设定立即生效 （用于更改密码后） flush privileges; </span><br><span class="line">3.退出 exit；</span><br><span class="line">4.查询MySQL版本信息 select version();（可以用于判断是否有可以爆信息的information—schema）</span><br><span class="line">5.查询使用者权限或者用户名 select user();</span><br><span class="line">6.查询当前所在的库 select database();</span><br><span class="line">7.显示所有库 show databases;</span><br><span class="line">8.使用某个库 use 库名；</span><br><span class="line">9.显示当前库下的所有表 show tables;</span><br><span class="line">10.创建一个库 create database 库名;</span><br><span class="line">11.删除一个库 drop database text;</span><br><span class="line">12.在当前库下添加一个表，表里有id（整型），username（char字符串型），password（char字符串型）</span><br><span class="line">   create table 表名(id int, username varchar(20), password varchar(20) );</span><br><span class="line">13.在当前库下的某个表下添加括号里数据 insert into 表名 values(1,’admin’,’123’);</span><br><span class="line">13.要给表添加一列，列名为gender，类型为varchar，长度为2，用如下语句：alter table user add gender varchar(2);</span><br><span class="line">查看列：desc 表名;</span><br><span class="line">修改表名：alter table t_book rename to bbb;</span><br><span class="line">添加列：alter table 表名 add column 列名 varchar(30);</span><br><span class="line">删除列：alter table 表名 drop column 列名;</span><br><span class="line">修改列名MySQL： alter table bbb change nnnnn hh int;</span><br><span class="line">修改列名SQLServer：exec sp_rename&apos;t_student.name&apos;,&apos;nn&apos;,&apos;column&apos;;</span><br><span class="line">修改列名Oracle：lter table bbb rename column nnnnn to hh int;</span><br><span class="line">修改列属性：alter table t_book modify name varchar(22);</span><br><span class="line">删除user表下id=2的数据：delete from user where id=2;</span><br><span class="line"></span><br><span class="line">DROP DATABASE tutorial_database;</span><br><span class="line">如果该数据库tutorial_database不存在，那么你会收到此错误：</span><br><span class="line">ERROR 1008 (HY000): Can&apos;t drop database &apos;tutorial_database&apos;; database doesn&apos;t exist</span><br><span class="line">为了避免出现此错误使用下面的命令：</span><br><span class="line">DROP DATABASE IF EXISTS tutorial_database;</span><br><span class="line"></span><br><span class="line">14.查询表下所有信息 select * from 表名;     *是一个通配符</span><br><span class="line">15.显示表的字段信息 dasc 表名;</span><br><span class="line">16.@@version_compile_os 服务器系统信息</span><br><span class="line">   @@basedir MySQL装在电脑那个目录里</span><br><span class="line">   @@datadir 也是和MySQL目录有关的</span><br><span class="line">   @@temdir 未知</span><br><span class="line">   使用方法：mysql&gt; select *from 表名 where id=-1 and 写一个为真的条件（例如1=1） union select version(),@@version_compile_os,@@datadir;（最多同时查寻数据不得超过表中字段数，剩余的位置用数字填充）</span><br><span class="line">   这样会显示出MySQL版本信息，服务器系统信息，MySQL安装目录</span><br><span class="line">17.查询当ID=1时的数据 select * from 表名 where id =1; </span><br><span class="line">18.查询当id=1时，username,password字段的数据 select username,password from 表名 where id =1;</span><br><span class="line">   查询当username=”admin”时，password字段的数据 select password from 表名 where username=”admin”;</span><br><span class="line">19.查询语句 select * from 表名 where id=‘1’and exists(select * from user )；其中exists（）是逐条查询函数，只要表里有信息就返回真。（觉得适用于注入时判断表中是否有信息）</span><br><span class="line">20.判断表中字段条数 order by 数字;</span><br><span class="line">   例子：mysql&gt; select *from 表名 where id=1 and 1=1 order by 3;//猜中或者猜小会正常显示 </span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         | id   | username | password |</span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         |    1 | admin    | 123      |</span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">         mysql&gt; select *from 表名 where id=1 and 1=1 order by 4;//猜大会报错或者不显示</span><br><span class="line">         ERROR 1054 (42S22): Unknown column &apos;4&apos; in &apos;order clause&apos;</span><br><span class="line">21.联合查询把1234等数字放在显示的表中 union select 1,2,3,4,……,n;（n是上一步查询到的字段条数）</span><br><span class="line">   例子：mysql&gt; select *from 表名 where id=1 and 1=1 union select 1,2,3;</span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         | id   | username | password |</span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         |    1 | admin    | 123      |</span><br><span class="line">         |    1 | 2        | 3        |</span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         2 rows in set (0.00 sec)</span><br><span class="line">         此时把id=1换成id=-1，可以消去第一条数据</span><br><span class="line">22.联合查询显示表中所有信息，使用方法见21 union select 字段，字段，.....，字段 from admin;(前后字段数目必须一致)</span><br><span class="line"></span><br><span class="line">1、查看mysql版本</span><br><span class="line">方法一：status;</span><br><span class="line">方法二：select version();</span><br><span class="line"></span><br><span class="line">2、Mysql启动、停止、重启常用命令</span><br><span class="line">a、启动方式</span><br><span class="line">1、使用 service 启动：</span><br><span class="line">[root@localhost /]# service mysqld start (5.0版本是mysqld)</span><br><span class="line">[root@szxdb etc]# service mysql start (5.5.7版本是mysql)</span><br><span class="line"></span><br><span class="line">2、使用 mysqld 脚本启动：</span><br><span class="line">/etc/inint.d/mysqld start</span><br><span class="line"></span><br><span class="line">3、使用 safe_mysqld 启动：</span><br><span class="line">safe_mysqld&amp;</span><br><span class="line"></span><br><span class="line">b、停止</span><br><span class="line">1、使用 service 启动：</span><br><span class="line">service mysqld stop</span><br><span class="line"></span><br><span class="line">2、使用 mysqld 脚本启动：</span><br><span class="line">/etc/inint.d/mysqld stop</span><br><span class="line"></span><br><span class="line">3、mysqladmin shutdown</span><br><span class="line"></span><br><span class="line">c、重启</span><br><span class="line">1、使用 service 启动：</span><br><span class="line">service mysqld restart</span><br><span class="line">service mysql restart (5.5.7版本命令)</span><br><span class="line"></span><br><span class="line">2、使用 mysqld 脚本启动：</span><br><span class="line">/etc/init.d/mysqld restart</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">orcale数据库</span><br><span class="line"></span><br><span class="line">打开服务</span><br><span class="line">sqlplus</span><br><span class="line"></span><br><span class="line">解锁scott用户</span><br><span class="line"></span><br><span class="line">管理员登录</span><br><span class="line">sqlplus(空格)/nolog</span><br><span class="line">conn sys/password as sysdba</span><br><span class="line">解锁scott</span><br><span class="line">alter user scott account unlock;</span><br><span class="line">修改scott的登录密码：</span><br><span class="line">alter user scott identified by tiger;</span><br><span class="line">scott登录</span><br><span class="line">conn scott/tiger</span><br><span class="line"></span><br><span class="line">https://blog.csdn.net/yali1990515/article/details/51732427</span><br></pre></td></tr></table></figure></p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 基本操作 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>python模拟鼠标键盘事件</title>
       <link href="/2018/06/18/python%E6%A8%A1%E6%8B%9F%E9%BC%A0%E6%A0%87%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/"/>
       <url>/2018/06/18/python%E6%A8%A1%E6%8B%9F%E9%BC%A0%E6%A0%87%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/</url>
@@ -17,9 +38,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> 代码技巧 </tag>
+            
+            <tag> python </tag>
             
             <tag> 蛇形操作 </tag>
             
@@ -67,9 +88,9 @@
             
             <tag> Android </tag>
             
-            <tag> Java </tag>
-            
             <tag> xml </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       
@@ -90,11 +111,11 @@
       
         <tags>
             
-            <tag> 代码技巧 </tag>
-            
             <tag> Android </tag>
             
             <tag> Java </tag>
+            
+            <tag> 代码技巧 </tag>
             
         </tags>
       
@@ -117,9 +138,9 @@
             
             <tag> Android </tag>
             
-            <tag> Java </tag>
-            
             <tag> xml </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       

@@ -45,7 +45,7 @@
     
     <title>
         
-            Android欢迎界面实现 | 
+            sql语句基础合集 | 
         
         ssssdl
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Android,xml,Java">
+    <meta name="keywords" content=",SQL">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -217,7 +217,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="ssssdl">
-    <meta name="msapplication-starturl" content="http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/">
+    <meta name="msapplication-starturl" content="http://ssssdl.github.io/2018/06/20/sql语句基础合集/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="ssssdl">
@@ -236,16 +236,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/">
+    <meta property="og:url" content="http://ssssdl.github.io/2018/06/20/sql语句基础合集/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Android欢迎界面实现 | ssssdl">
+    <meta property="og:title" content="sql语句基础合集 | ssssdl">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Android"> <meta property="og:article:tag" content="xml"> <meta property="og:article:tag" content="Java"> 
+    <meta property="og:article:tag" content="SQL"> 
 
     
-        <meta property="article:published_time" content="Wed May 30 2018 20:55:28 GMT+0800">
-        <meta property="article:modified_time" content="Wed May 30 2018 20:58:46 GMT+0800">
+        <meta property="article:published_time" content="Wed Jun 20 2018 20:22:00 GMT+0800">
+        <meta property="article:modified_time" content="Wed Jun 20 2018 20:30:54 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -253,7 +253,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/index.html" />
+        <link rel="canonical" href="http://ssssdl.github.io/2018/06/20/sql语句基础合集/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -265,10 +265,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/index.html",
-    "headline": "Android欢迎界面实现",
-    "datePublished": "Wed May 30 2018 20:55:28 GMT+0800",
-    "dateModified": "Wed May 30 2018 20:58:46 GMT+0800",
+    "mainEntityOfPage": "http://ssssdl.github.io/2018/06/20/sql语句基础合集/index.html",
+    "headline": "sql语句基础合集",
+    "datePublished": "Wed Jun 20 2018 20:22:00 GMT+0800",
+    "dateModified": "Wed Jun 20 2018 20:30:54 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "ssssdl",
@@ -286,7 +286,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",Android,xml,Java",
+    "keywords": ",SQL",
     "description": "",
 }
 </script>
@@ -352,7 +352,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Android-欢迎界面实现"><span class="post-toc-number">1.</span> <span class="post-toc-text">Android 欢迎界面实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0X00-原理解析"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">0X00 原理解析</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0X01-具体实现"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">0X01 具体实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#优先启动欢迎界面"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">优先启动欢迎界面</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#延时调用主活动"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">延时调用主活动</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0X02-总结"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">0X02 总结</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#基础整理"><span class="post-toc-number">1.</span> <span class="post-toc-text">基础整理</span></a></li></ol>
     </ul>
     
 
@@ -384,7 +384,7 @@
         
     
             <p class="article-headline-p">
-                Android欢迎界面实现
+                sql语句基础合集
             </p>
         </div>
 
@@ -403,7 +403,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>ssssdl</strong>
-        <span>5月 30, 2018</span>
+        <span>6月 20, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -427,7 +427,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Android/">Android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Java/">Java</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/xml/">xml</a>
+        <a class="post_tag-link" href="/tags/SQL/">SQL</a>
     </ul>
     
 
@@ -455,7 +455,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android欢迎界面实现&url=http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/index.html&pic=http://ssssdl.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=sql语句基础合集&url=http://ssssdl.github.io/2018/06/20/sql语句基础合集/index.html&pic=http://ssssdl.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -464,7 +464,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android欢迎界面实现&url=http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/index.html&via=ssssdl" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=sql语句基础合集&url=http://ssssdl.github.io/2018/06/20/sql语句基础合集/index.html&via=ssssdl" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -473,7 +473,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ssssdl.github.io/2018/06/20/sql语句基础合集/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -482,7 +482,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://ssssdl.github.io/2018/06/20/sql语句基础合集/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -494,7 +494,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=ssssdl&title=Android欢迎界面实现&summary=&pics=http://ssssdl.github.io/img/favicon.png&url=http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=ssssdl&title=sql语句基础合集&summary=&pics=http://ssssdl.github.io/img/favicon.png&url=http://ssssdl.github.io/2018/06/20/sql语句基础合集/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -513,23 +513,11 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Android-欢迎界面实现"><a href="#Android-欢迎界面实现" class="headerlink" title="Android 欢迎界面实现"></a>Android 欢迎界面实现</h1><h2 id="0X00-原理解析"><a href="#0X00-原理解析" class="headerlink" title="0X00 原理解析"></a>0X00 原理解析</h2><blockquote>
-<p>实现方法很多，但基本原理都差不多，就是在你的功能界面之前调用一个欢迎的活动，欢迎活动尽量简单，太复杂好像会引起应用启动时短暂的白屏，然后再欢迎Activity 延时一段时间，跳转到功能界面就可以了  </p>
-</blockquote>
-<h2 id="0X01-具体实现"><a href="#0X01-具体实现" class="headerlink" title="0X01 具体实现"></a>0X01 具体实现</h2><h3 id="优先启动欢迎界面"><a href="#优先启动欢迎界面" class="headerlink" title="优先启动欢迎界面"></a>优先启动欢迎界面</h3><blockquote>
-<p>右键工程建立一个Activity,一阵设计界面后，设置这个活动第一个启动：<br>在AndroidMainifest.xml中：<br>主活动中剪切如下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">... ...</span><br><span class="line">&lt;intent-filter&gt;&lt;!--这四行放在activity标签中代表这个活动是第一个启动--&gt;</span><br><span class="line">    &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;</span><br><span class="line">    &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;</span><br><span class="line">&lt;/intent-filter&gt;&lt;!--end--&gt;</span><br><span class="line">... ...</span><br></pre></td></tr></table></figure></p>
+        <h1 id="基础整理"><a href="#基础整理" class="headerlink" title="基础整理"></a>基础整理</h1><blockquote>
+<p>整理一波自己以前用的比较基本的sql语句，还有一些MySQL orcale 数据库的操作，</p>
 </blockquote>
 <blockquote>
-<p>粘贴到欢迎活动中去，结果如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">... ...</span><br><span class="line">&lt;activity android:name=&quot;.MainActivity&quot;</span><br><span class="line">    android:screenOrientation=&quot;portrait&quot;&gt;</span><br><span class="line">    &lt;!--这个是主界面，android:screenOrientation=&quot;portrait&quot;设置只能竖屏--&gt;</span><br><span class="line">&lt;/activity&gt;</span><br><span class="line">&lt;activity android:name=&quot;.Main2Activity&quot;&gt;&lt;!--欢迎界面--&gt;</span><br><span class="line">        &lt;intent-filter&gt;&lt;!--这四行放在activity标签中代表这个活动是第一个启动--&gt;</span><br><span class="line">        &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;</span><br><span class="line">        &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;</span><br><span class="line">    &lt;/intent-filter&gt;&lt;!--end--&gt;</span><br><span class="line">&lt;/activity&gt;</span><br><span class="line">... ...</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>到这里运行程序时就会先调用欢迎界面   </p>
-</blockquote>
-<h3 id="延时调用主活动"><a href="#延时调用主活动" class="headerlink" title="延时调用主活动"></a>延时调用主活动</h3><blockquote>
-<p>直接上代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">import android.content.Intent;</span><br><span class="line">import android.os.Handler;</span><br><span class="line">import android.os.Message;</span><br><span class="line">import android.support.v7.app.AppCompatActivity;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line"></span><br><span class="line">public class Main2Activity extends AppCompatActivity &#123;//欢迎界面</span><br><span class="line">    private Handler handler = new Handler() &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void handleMessage(Message msg) &#123;</span><br><span class="line">            //接收到消息后跳转</span><br><span class="line">            goMain();</span><br><span class="line">            super.handleMessage(msg);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main2);</span><br><span class="line">        //延迟两秒发送消息</span><br><span class="line">        handler.sendEmptyMessageDelayed(0,2000);</span><br><span class="line">    &#125;</span><br><span class="line">    private void goMain() &#123;</span><br><span class="line">        //设定调动MainActivity</span><br><span class="line">        Intent intent=new Intent(this,MainActivity.class);</span><br><span class="line">        startActivity(intent);  //将控制权交给MainActivity</span><br><span class="line">        finish();   //结束</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h2 id="0X02-总结"><a href="#0X02-总结" class="headerlink" title="0X02 总结"></a>0X02 总结</h2><blockquote>
-<p>不然可以建立工程的时候先写欢迎Activity 哈哈哈哈哈</p>
+<p>不包括设置制约关系，触发器等知识（有时间再整理），就是简单的增删改查等操作，整理的比较随意，将就着看  。。。（有时间还会更新）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">mysql -h127.0.0.1 -u用户名 -p密码 本地打开mysql命令行</span><br><span class="line"></span><br><span class="line">1.更改密码  update user set authentication_string = PASSWORD(&apos;你自己的密码&apos;) where user=&apos;root&apos;;</span><br><span class="line">                 ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;new_password&apos;;</span><br><span class="line">2. 使设定立即生效 （用于更改密码后） flush privileges; </span><br><span class="line">3.退出 exit；</span><br><span class="line">4.查询MySQL版本信息 select version();（可以用于判断是否有可以爆信息的information—schema）</span><br><span class="line">5.查询使用者权限或者用户名 select user();</span><br><span class="line">6.查询当前所在的库 select database();</span><br><span class="line">7.显示所有库 show databases;</span><br><span class="line">8.使用某个库 use 库名；</span><br><span class="line">9.显示当前库下的所有表 show tables;</span><br><span class="line">10.创建一个库 create database 库名;</span><br><span class="line">11.删除一个库 drop database text;</span><br><span class="line">12.在当前库下添加一个表，表里有id（整型），username（char字符串型），password（char字符串型）</span><br><span class="line">   create table 表名(id int, username varchar(20), password varchar(20) );</span><br><span class="line">13.在当前库下的某个表下添加括号里数据 insert into 表名 values(1,’admin’,’123’);</span><br><span class="line">13.要给表添加一列，列名为gender，类型为varchar，长度为2，用如下语句：alter table user add gender varchar(2);</span><br><span class="line">查看列：desc 表名;</span><br><span class="line">修改表名：alter table t_book rename to bbb;</span><br><span class="line">添加列：alter table 表名 add column 列名 varchar(30);</span><br><span class="line">删除列：alter table 表名 drop column 列名;</span><br><span class="line">修改列名MySQL： alter table bbb change nnnnn hh int;</span><br><span class="line">修改列名SQLServer：exec sp_rename&apos;t_student.name&apos;,&apos;nn&apos;,&apos;column&apos;;</span><br><span class="line">修改列名Oracle：lter table bbb rename column nnnnn to hh int;</span><br><span class="line">修改列属性：alter table t_book modify name varchar(22);</span><br><span class="line">删除user表下id=2的数据：delete from user where id=2;</span><br><span class="line"></span><br><span class="line">DROP DATABASE tutorial_database;</span><br><span class="line">如果该数据库tutorial_database不存在，那么你会收到此错误：</span><br><span class="line">ERROR 1008 (HY000): Can&apos;t drop database &apos;tutorial_database&apos;; database doesn&apos;t exist</span><br><span class="line">为了避免出现此错误使用下面的命令：</span><br><span class="line">DROP DATABASE IF EXISTS tutorial_database;</span><br><span class="line"></span><br><span class="line">14.查询表下所有信息 select * from 表名;     *是一个通配符</span><br><span class="line">15.显示表的字段信息 dasc 表名;</span><br><span class="line">16.@@version_compile_os 服务器系统信息</span><br><span class="line">   @@basedir MySQL装在电脑那个目录里</span><br><span class="line">   @@datadir 也是和MySQL目录有关的</span><br><span class="line">   @@temdir 未知</span><br><span class="line">   使用方法：mysql&gt; select *from 表名 where id=-1 and 写一个为真的条件（例如1=1） union select version(),@@version_compile_os,@@datadir;（最多同时查寻数据不得超过表中字段数，剩余的位置用数字填充）</span><br><span class="line">   这样会显示出MySQL版本信息，服务器系统信息，MySQL安装目录</span><br><span class="line">17.查询当ID=1时的数据 select * from 表名 where id =1; </span><br><span class="line">18.查询当id=1时，username,password字段的数据 select username,password from 表名 where id =1;</span><br><span class="line">   查询当username=”admin”时，password字段的数据 select password from 表名 where username=”admin”;</span><br><span class="line">19.查询语句 select * from 表名 where id=‘1’and exists(select * from user )；其中exists（）是逐条查询函数，只要表里有信息就返回真。（觉得适用于注入时判断表中是否有信息）</span><br><span class="line">20.判断表中字段条数 order by 数字;</span><br><span class="line">   例子：mysql&gt; select *from 表名 where id=1 and 1=1 order by 3;//猜中或者猜小会正常显示 </span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         | id   | username | password |</span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         |    1 | admin    | 123      |</span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">         mysql&gt; select *from 表名 where id=1 and 1=1 order by 4;//猜大会报错或者不显示</span><br><span class="line">         ERROR 1054 (42S22): Unknown column &apos;4&apos; in &apos;order clause&apos;</span><br><span class="line">21.联合查询把1234等数字放在显示的表中 union select 1,2,3,4,……,n;（n是上一步查询到的字段条数）</span><br><span class="line">   例子：mysql&gt; select *from 表名 where id=1 and 1=1 union select 1,2,3;</span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         | id   | username | password |</span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         |    1 | admin    | 123      |</span><br><span class="line">         |    1 | 2        | 3        |</span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         2 rows in set (0.00 sec)</span><br><span class="line">         此时把id=1换成id=-1，可以消去第一条数据</span><br><span class="line">22.联合查询显示表中所有信息，使用方法见21 union select 字段，字段，.....，字段 from admin;(前后字段数目必须一致)</span><br><span class="line"></span><br><span class="line">1、查看mysql版本</span><br><span class="line">方法一：status;</span><br><span class="line">方法二：select version();</span><br><span class="line"></span><br><span class="line">2、Mysql启动、停止、重启常用命令</span><br><span class="line">a、启动方式</span><br><span class="line">1、使用 service 启动：</span><br><span class="line">[root@localhost /]# service mysqld start (5.0版本是mysqld)</span><br><span class="line">[root@szxdb etc]# service mysql start (5.5.7版本是mysql)</span><br><span class="line"></span><br><span class="line">2、使用 mysqld 脚本启动：</span><br><span class="line">/etc/inint.d/mysqld start</span><br><span class="line"></span><br><span class="line">3、使用 safe_mysqld 启动：</span><br><span class="line">safe_mysqld&amp;</span><br><span class="line"></span><br><span class="line">b、停止</span><br><span class="line">1、使用 service 启动：</span><br><span class="line">service mysqld stop</span><br><span class="line"></span><br><span class="line">2、使用 mysqld 脚本启动：</span><br><span class="line">/etc/inint.d/mysqld stop</span><br><span class="line"></span><br><span class="line">3、mysqladmin shutdown</span><br><span class="line"></span><br><span class="line">c、重启</span><br><span class="line">1、使用 service 启动：</span><br><span class="line">service mysqld restart</span><br><span class="line">service mysql restart (5.5.7版本命令)</span><br><span class="line"></span><br><span class="line">2、使用 mysqld 脚本启动：</span><br><span class="line">/etc/init.d/mysqld restart</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">orcale数据库</span><br><span class="line"></span><br><span class="line">打开服务</span><br><span class="line">sqlplus</span><br><span class="line"></span><br><span class="line">解锁scott用户</span><br><span class="line"></span><br><span class="line">管理员登录</span><br><span class="line">sqlplus(空格)/nolog</span><br><span class="line">conn sys/password as sysdba</span><br><span class="line">解锁scott</span><br><span class="line">alter user scott account unlock;</span><br><span class="line">修改scott的登录密码：</span><br><span class="line">alter user scott identified by tiger;</span><br><span class="line">scott登录</span><br><span class="line">conn scott/tiger</span><br><span class="line"></span><br><span class="line">https://blog.csdn.net/yali1990515/article/details/51732427</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 
         
@@ -585,8 +573,8 @@
 
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://ssssdl.github.io/2018/05/30/Android欢迎界面实现/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://ssssdl.github.io/2018/06/20/sql语句基础合集/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://ssssdl.github.io/2018/06/20/sql语句基础合集/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
@@ -635,21 +623,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/05/30/Android数组-循环批量管理控件/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/05/16/hello-world/" id="post_nav-older" class="next-content">
+        <a href="/2018/06/18/python模拟鼠标键盘事件/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

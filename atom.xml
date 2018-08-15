@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ssssdl.github.io/"/>
-  <updated>2018-07-13T07:53:07.039Z</updated>
+  <updated>2018-08-15T03:28:37.645Z</updated>
   <id>http://ssssdl.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hackinglab做题脚本整理</title>
+    <link href="http://ssssdl.github.io/2018/07/25/hackinglab%E5%81%9A%E9%A2%98%E8%84%9A%E6%9C%AC%E6%95%B4%E7%90%86/"/>
+    <id>http://ssssdl.github.io/2018/07/25/hackinglab做题脚本整理/</id>
+    <published>2018-07-25T08:29:01.000Z</published>
+    <updated>2018-08-15T03:28:37.645Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="php" scheme="http://ssssdl.github.io/categories/php/"/>
+    
+    
+      <category term="脚本" scheme="http://ssssdl.github.io/tags/%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
   
   <entry>
     <title>sql语句基础合集</title>

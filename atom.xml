@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ssssdl.github.io/"/>
-  <updated>2018-08-15T03:41:04.630Z</updated>
+  <updated>2018-08-21T09:14:59.658Z</updated>
   <id>http://ssssdl.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>svn泄露利用脚本</title>
+    <link href="http://ssssdl.github.io/2018/08/21/svn%E6%B3%84%E9%9C%B2%E5%88%A9%E7%94%A8%E8%84%9A%E6%9C%AC/"/>
+    <id>http://ssssdl.github.io/2018/08/21/svn泄露利用脚本/</id>
+    <published>2018-08-21T08:58:20.000Z</published>
+    <updated>2018-08-21T09:14:59.658Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://ssssdl.github.io/categories/python/"/>
+    
+      <category term="网络安全" scheme="http://ssssdl.github.io/categories/python/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="网络安全" scheme="http://ssssdl.github.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="svn泄露" scheme="http://ssssdl.github.io/tags/svn%E6%B3%84%E9%9C%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>hackinglab做题脚本整理</title>

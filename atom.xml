@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ssssdl.github.io/"/>
-  <updated>2018-08-23T13:20:04.223Z</updated>
+  <updated>2018-08-23T13:25:19.752Z</updated>
   <id>http://ssssdl.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://ssssdl.github.io/2018/08/23/%E5%85%B3%E4%BA%8ESSR/"/>
     <id>http://ssssdl.github.io/2018/08/23/关于SSR/</id>
     <published>2018-08-23T03:40:34.000Z</published>
-    <updated>2018-08-23T13:20:04.223Z</updated>
+    <updated>2018-08-23T13:25:19.752Z</updated>
     
     <summary type="html">
     
@@ -208,9 +208,9 @@
     
       <category term="Android" scheme="http://ssssdl.github.io/tags/Android/"/>
     
-      <category term="Java" scheme="http://ssssdl.github.io/tags/Java/"/>
-    
       <category term="xml" scheme="http://ssssdl.github.io/tags/xml/"/>
+    
+      <category term="Java" scheme="http://ssssdl.github.io/tags/Java/"/>
     
   </entry>
   
@@ -238,9 +238,9 @@
     
       <category term="Android" scheme="http://ssssdl.github.io/tags/Android/"/>
     
-      <category term="代码技巧" scheme="http://ssssdl.github.io/tags/%E4%BB%A3%E7%A0%81%E6%8A%80%E5%B7%A7/"/>
-    
       <category term="Java" scheme="http://ssssdl.github.io/tags/Java/"/>
+    
+      <category term="代码技巧" scheme="http://ssssdl.github.io/tags/%E4%BB%A3%E7%A0%81%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
@@ -268,9 +268,9 @@
     
       <category term="Android" scheme="http://ssssdl.github.io/tags/Android/"/>
     
-      <category term="Java" scheme="http://ssssdl.github.io/tags/Java/"/>
-    
       <category term="xml" scheme="http://ssssdl.github.io/tags/xml/"/>
+    
+      <category term="Java" scheme="http://ssssdl.github.io/tags/Java/"/>
     
   </entry>
   

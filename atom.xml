@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ssssdl.github.io/"/>
-  <updated>2018-08-21T09:14:59.658Z</updated>
+  <updated>2018-08-23T13:15:53.548Z</updated>
   <id>http://ssssdl.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于SSR</title>
+    <link href="http://ssssdl.github.io/2018/08/23/%E5%85%B3%E4%BA%8ESSR/"/>
+    <id>http://ssssdl.github.io/2018/08/23/关于SSR/</id>
+    <published>2018-08-23T03:40:34.000Z</published>
+    <updated>2018-08-23T13:15:53.548Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="基本操作" scheme="http://ssssdl.github.io/categories/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    
+    
+      <category term="科学上网" scheme="http://ssssdl.github.io/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+      <category term="linux" scheme="http://ssssdl.github.io/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>svn泄露利用脚本</title>

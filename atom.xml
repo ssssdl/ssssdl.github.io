@@ -49,7 +49,7 @@
     <link href="http://ssssdl.github.io/2018/08/24/%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E6%94%BE%E5%BC%83Windows%E6%94%B9%E7%94%A8kali/"/>
     <id>http://ssssdl.github.io/2018/08/24/教你如何放弃Windows改用kali/</id>
     <published>2018-08-24T05:47:27.000Z</published>
-    <updated>2018-08-24T06:43:28.561Z</updated>
+    <updated>2018-08-24T13:27:05.065Z</updated>
     
     <summary type="html">
     
@@ -68,9 +68,9 @@
       <category term="linux" scheme="http://ssssdl.github.io/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/linux/"/>
     
     
-      <category term="Linux" scheme="http://ssssdl.github.io/tags/Linux/"/>
-    
       <category term="kali" scheme="http://ssssdl.github.io/tags/kali/"/>
+    
+      <category term="linux" scheme="http://ssssdl.github.io/tags/linux/"/>
     
   </entry>
   
@@ -229,7 +229,7 @@
     <link href="http://ssssdl.github.io/2018/08/23/%E5%85%B3%E4%BA%8ESSR/"/>
     <id>http://ssssdl.github.io/2018/08/23/关于SSR/</id>
     <published>2018-08-23T03:40:34.000Z</published>
-    <updated>2018-08-24T06:42:51.462Z</updated>
+    <updated>2018-08-24T13:26:57.604Z</updated>
     
     <summary type="html">
     
@@ -243,14 +243,14 @@
     
     </summary>
     
-      <category term="linux" scheme="http://ssssdl.github.io/categories/linux/"/>
+      <category term="环境配置" scheme="http://ssssdl.github.io/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
-      <category term="环境配置" scheme="http://ssssdl.github.io/categories/linux/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+      <category term="linux" scheme="http://ssssdl.github.io/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/linux/"/>
     
-    
-      <category term="科学上网" scheme="http://ssssdl.github.io/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     
       <category term="linux" scheme="http://ssssdl.github.io/tags/linux/"/>
+    
+      <category term="科学上网" scheme="http://ssssdl.github.io/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     
   </entry>
   

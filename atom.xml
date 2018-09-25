@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ssssdl.github.io/"/>
-  <updated>2018-08-24T09:17:19.892Z</updated>
+  <updated>2018-09-25T09:28:48.060Z</updated>
   <id>http://ssssdl.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ctf中xss正确出题姿势</title>
+    <link href="http://ssssdl.github.io/2018/09/25/ctf%E4%B8%ADxss%E6%AD%A3%E7%A1%AE%E5%87%BA%E9%A2%98%E5%A7%BF%E5%8A%BF/"/>
+    <id>http://ssssdl.github.io/2018/09/25/ctf中xss正确出题姿势/</id>
+    <published>2018-09-25T08:39:43.000Z</published>
+    <updated>2018-09-25T09:28:48.060Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="网络安全" scheme="http://ssssdl.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="xss" scheme="http://ssssdl.github.io/tags/xss/"/>
+    
+  </entry>
   
   <entry>
     <title>python制作01组成的记事本照片</title>
@@ -426,9 +452,9 @@
     
       <category term="Android" scheme="http://ssssdl.github.io/tags/Android/"/>
     
-      <category term="xml" scheme="http://ssssdl.github.io/tags/xml/"/>
-    
       <category term="Java" scheme="http://ssssdl.github.io/tags/Java/"/>
+    
+      <category term="xml" scheme="http://ssssdl.github.io/tags/xml/"/>
     
   </entry>
   
@@ -456,9 +482,9 @@
     
       <category term="Android" scheme="http://ssssdl.github.io/tags/Android/"/>
     
-      <category term="Java" scheme="http://ssssdl.github.io/tags/Java/"/>
-    
       <category term="代码技巧" scheme="http://ssssdl.github.io/tags/%E4%BB%A3%E7%A0%81%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="Java" scheme="http://ssssdl.github.io/tags/Java/"/>
     
   </entry>
   
@@ -486,9 +512,9 @@
     
       <category term="Android" scheme="http://ssssdl.github.io/tags/Android/"/>
     
-      <category term="xml" scheme="http://ssssdl.github.io/tags/xml/"/>
-    
       <category term="Java" scheme="http://ssssdl.github.io/tags/Java/"/>
+    
+      <category term="xml" scheme="http://ssssdl.github.io/tags/xml/"/>
     
   </entry>
   

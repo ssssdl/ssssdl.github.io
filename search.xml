@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ctf中xss正确出题姿势]]></title>
+    <url>%2F2018%2F09%2F25%2Fctf%E4%B8%ADxss%E6%AD%A3%E7%A1%AE%E5%87%BA%E9%A2%98%E5%A7%BF%E5%8A%BF%2F</url>
+    <content type="text"><![CDATA[0x00 问题分析 xss一般的出题思路是考一些绕过，或者一些常见函数，利用这些使用户浏览器弹窗，但是最终的弹窗结果是显示在用户浏览器端的，单纯的借助php是没办法在浏览器验证是否造成了弹窗的（也可能是有办法我没发现），以前做过一些CTF关于xss的题目，有的考编码绕过，当用户提交含有绕过编码的字段，就直接给出flag（bugku xss），还有一些是通过浏览器端js判断，但是只要用户读懂js就可以不通过弹窗直接可以get flag（hackinglab xss），等等吧，感觉都不怎么理想。 0x01解决 解决思路来源于这位大佬的博客，但是这位大佬是用js写的，我的js比较水，就用php完成的这个题目 思路： phantomjs是一个没有图形界面的浏览器,可以直接使用少量js+phantomjs本身提供的函数和接口（好像也提供了php的接口）直接操作。 利用php中的exec或者system之类的函数执行系统命令，调用js打开操作phantomjs验证弹窗等，并输出返回值，判断是否给出flag实际操作 环境部署 搭建lamp，我是再centos7上弄的，具体的搭建过程就不详细描述了 安装nodejs，大概这样三条命令 123yum info epel-releaseyum install nodejsnode -v 安装phantomjs，命令如下 12npm install phantomjs -gphantomjs --version 具体过程中可能要关闭selinux，操作如下 12setenforce 0(暂时)修改/etc/selinux/config文件中的SELINUX=&quot;&quot; 为 disabled ，然后重启。（永久） 这样环境就基本搭建完了，可以在命令行中试一下phantomjs，其实还是挺有意思 代码实现 js调用phantomjs验证 1234567891011121314151617181920212223242526272829var webPage = require(&apos;webpage&apos;);var page = webPage.create();var postBody = &apos;id=1&apos;;var url = &apos;http://127.0.0.1/verification.php&apos;//接收命令行参数 第一个要验证是否能弹窗的js的base64（也可以不用加密） 第二个验证的是网页地址base64 var system = require(&apos;system&apos;);if (system.args.length === 1) &#123; //console.log(&apos;Try to pass some args when invoking this script!&apos;); phantom.exit();&#125; else &#123; system.args.forEach(function (arg, i) &#123; if(i === 1)&#123; postBody = &apos;id=&apos;+ atob(arg); &#125; if(i ===2 )&#123; url = atob(arg); &#125; &#125;);&#125;page.open(url,&apos;POST&apos;,postBody,function(status) &#123;//打开网页 //console.log(&apos;Status: &apos; + status);//获取加载消息 //console.log(page.content);//获取页面内容 //page.render(&apos;aa.png&apos;);//获取屏幕截图 phantom.exit(); &#125;);page.onAlert = function(msg) &#123;//获取alert弹窗消息 比如如果执行了alert(&apos;key&apos;)就会输出key 没弹框的话就什么都不输出 console.log(msg);&#125;; php调用js ，这个没什么说的，就是一个系统命令执行，注意防一下命令执行，还有就是直接用nodejs就不会有这个问题 12exec(&apos;phantomjs --output-encoding=utf8 verification.js &apos;.base64_encode(iconv(&apos;utf-8&apos;,&apos;gbk&apos;,$_key)).&apos; &apos;.base64_encode(iconv(&apos;utf-8&apos;,&apos;gbk&apos;,$_url)),$output_main);//其实就是 exec(&apos;命令&apos;,$返回值) 注意编码，还有就是返回值是数组形式的可以用count()之类的函数判断是否为空 需要注意的地方： js代码一定要写对，效率要高，js一旦出问题会卡好久，应该会占用一部分资源php中要做好防止命令执行还有一个就是一定要想好逻辑，避免出现死循环，比如：你用ctfer访问的页面去验证是否弹窗，那是不是当phantomjs的验证弹窗操作也会被服务器理解为成ctfer的提交操作，然后再调用phantomjs去验证。。。。然后服务器就崩溃了，这里一定要注意，我想出的解决方法就是在代码中把phantomjs和ctfer分开，传个key值什么的，也可以写一个简单的验证页面（echo $_POST(‘id’);这种的），就可以解决这个问题 0x02 附：关于csrf 这次出题我还出了一个关于csrf，大致就是利用xss平台或者自己搭建网站获取管理员cookie，然后冒充管理员登录getflag，其实本来没什么说的，但是中间遇到了一个phantomjs模拟登录后进如登录后的界面的问题，以前我写登录一般都是直接用js跳转的，但是这个phantomjs没办法得到js跳转后的页面，这样模拟管理员登录查看留言时，管理员就看不到留言，后来使用php的header()函数解决 0x03 再附：一些参考文件 phantomjs官网，可以查询一些函数接口 什么的 大佬博客讲怎么用js出xss题目的 附上我的题目代码]]></content>
+      <categories>
+        <category>网络安全</category>
+      </categories>
+      <tags>
+        <tag>xss</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[python制作01组成的记事本照片]]></title>
     <url>%2F2018%2F08%2F24%2Fpython%E5%88%B6%E4%BD%9C01%E7%BB%84%E6%88%90%E7%9A%84%E8%AE%B0%E4%BA%8B%E6%9C%AC%E7%85%A7%E7%89%87%2F</url>
     <content type="text"><![CDATA[有趣的我又来写蛇皮代码了 前两天看沙雕网友总是在秀那个一个人用记事本写01然后就画出一张照片的那个视频，我决定用python实现一下，有hackinglab的基础肯定没问题的（估计出题的知道我把学到的这个用在这里想打人了吧 hhhhhh） f不多说直接上脚本 和之前的验证码识别一样要安装一些库和支持123456789101112131415161718192021222324from PIL import Imageimport numpy as np import matplotlib.pyplot as plt#打开图片im = Image.open(&apos;11.png&apos;)#减少图片的色彩，化为灰度图im = im.convert(&apos;L&apos;)img=np.array(im)rows,cols = img.shapeFile = open(&quot;hello1.txt&quot;, &quot;w&quot;)for i in range(rows): if(i%4==0): File.write(&quot;\n&quot;) for j in range(cols): if(j%2==0 and i%4==0): if(img[i,j]&lt;=128): File.write(&apos;0&apos;) else: File.write(&apos;1&apos;) File.close()print(rows)print(cols) 再来个效果图 注意这个记事本字体要根据代码调整合适大小 我这个是2号字(直接在输入字号那里输2回车)粗体，然后把那个自动换行取消掉，感觉还是有点大，还可以稍微调一下]]></content>
@@ -176,8 +187,8 @@
       </categories>
       <tags>
         <tag>Android</tag>
-        <tag>xml</tag>
         <tag>Java</tag>
+        <tag>xml</tag>
       </tags>
   </entry>
   <entry>
@@ -189,8 +200,8 @@
       </categories>
       <tags>
         <tag>Android</tag>
-        <tag>Java</tag>
         <tag>代码技巧</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -202,8 +213,8 @@
       </categories>
       <tags>
         <tag>Android</tag>
-        <tag>xml</tag>
         <tag>Java</tag>
+        <tag>xml</tag>
       </tags>
   </entry>
   <entry>

@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            关于SSR | 
+        
+        ssssdl
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",linux,科学上网">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?ezyEvm8ST5CGfpA+kFFi1g==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="ssssdl">
+    <meta name="msapplication-starturl" content="http://blog.ssssdl.xyz/2018/08/23/关于SSR/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="ssssdl">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    <meta name="google-site-verification" content="FAb1SZA5DlY71NEgASE3c3V6td9D4gaqVKvTZyG-RU0" />
+    <meta name="baidu-site-verification" content="S4FbrbkQB6" />
+
+    <!-- RSS -->
+    
+        
+            <link rel=alternate type="application/atom+xml" href="./atom.xml">
+        
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://blog.ssssdl.xyz/2018/08/23/关于SSR/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="关于SSR | ssssdl">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="linux"> <meta property="og:article:tag" content="科学上网"> 
+
+    
+        <meta property="article:published_time" content="Thu Aug 23 2018 11:40:34 GMT+0800">
+        <meta property="article:modified_time" content="Fri Aug 24 2018 21:31:34 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://blog.ssssdl.xyz/2018/08/23/关于SSR/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://blog.ssssdl.xyz/2018/08/23/关于SSR/index.html",
+    "headline": "关于SSR",
+    "datePublished": "Thu Aug 23 2018 11:40:34 GMT+0800",
+    "dateModified": "Fri Aug 24 2018 21:31:34 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "ssssdl",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "ssssdl",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",linux,科学上网",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#关于突然大面积更新博客"><span class="post-toc-number">1.</span> <span class="post-toc-text">关于突然大面积更新博客</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#搭建SSR"><span class="post-toc-number">2.</span> <span class="post-toc-text">搭建SSR</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x00租服务器"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">0x00租服务器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x01-脚本搭建ssr"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">0x01 脚本搭建ssr</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x02-配置BBR加速"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">0x02 配置BBR加速</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x03-shadowsocksr客户端配置"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">0x03 shadowsocksr客户端配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x04-Profixier实现全局代理"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">0x04 Profixier实现全局代理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x05-手机免流问题"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">0x05 手机免流问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x06-多端口实现"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">0x06 多端口实现</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x07-IPV6校园网免流"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">0x07  IPV6校园网免流</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#最后"><span class="post-toc-number">3.</span> <span class="post-toc-text">最后</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                关于SSR
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>ssssdl</strong>
+        <span>8月 23, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/linux/">linux</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/科学上网/">科学上网</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=关于SSR&url=http://blog.ssssdl.xyz/2018/08/23/关于SSR/index.html&pic=http://blog.ssssdl.xyz/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=关于SSR&url=http://blog.ssssdl.xyz/2018/08/23/关于SSR/index.html&via=ssssdl" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.ssssdl.xyz/2018/08/23/关于SSR/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://blog.ssssdl.xyz/2018/08/23/关于SSR/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=ssssdl&title=关于SSR&summary=&pics=http://blog.ssssdl.xyz/img/favicon.png&url=http://blog.ssssdl.xyz/2018/08/23/关于SSR/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="关于突然大面积更新博客"><a href="#关于突然大面积更新博客" class="headerlink" title="关于突然大面积更新博客"></a>关于突然大面积更新博客</h1><blockquote>
+<p>整理一下以前写的有意思的笔记</p>
+</blockquote>
+<h1 id="搭建SSR"><a href="#搭建SSR" class="headerlink" title="搭建SSR"></a>搭建SSR</h1><blockquote>
+<p>最近呆着没事想尝试搭建shadowsocksR，搭建起来很容易，但调试了好几次才调试的符合心意,分享一下</p>
+</blockquote>
+<h2 id="0x00租服务器"><a href="#0x00租服务器" class="headerlink" title="0x00租服务器"></a>0x00租服务器</h2><hr>
+<blockquote>
+<p>可以在这里租<a href="https://www.vultr.com/" target="_blank" rel="noopener">https://www.vultr.com/</a> 相对便宜 搬瓦工也可以<br>我用的是vultr ，按小时计费感觉对于我这种穷学生来说感觉还是比较划算<br>先充值，可以用支付宝直接付款，也可以银行卡付款 好像是10美金起充<br>，充60多rmb基本可以连续使用两个月，充好钱之后就可以开始选择服务器了<br>地区的话离得近的网速会快一点  还有就是相对用的少的网速会快  据说美国西部的会稳定一些<br>，有的时候选择了其他地区的服务器 ip依然可能是美国广播出去的，比较看脸。<br>我试过东京和新加坡的服务器ip都是美国广播出去的，搭好了ssr后感觉好像快了一点，但ssh连接很不稳定，有的时候卡到连命令都打不了，后来就删了（0.01美元删除重建一次服务器，重建的时候扣费），最终选择了美国西雅图的一个服务器<br>系统选centos6 x64 其他系统理论上也可以实现  但市面上大多一键部署脚本都是针对centos6的，据说centos7防火墙会干扰ssr服务，所以也不建议使用<br>下面有一个IPv6的选项 需要的可以选上，简单科学上网应该也用不到，但是我们学校可以用ipv4转ipv6免流，就要选上<br>选好套餐，直接选择最便宜的，这个东西不会需要太多配置<br>点击创建就可以了<br>等待一小会儿出现下图就算创建成功了  </p>
+</blockquote>
+<p><img src="https://ssssdl.github.io/img/guan-yu-ssr/chuangjianchenggong.png" alt="创建成功"></p>
+<blockquote>
+<p>点击这个服务器  </p>
+</blockquote>
+<p><img src="https://ssssdl.github.io/img/guan-yu-ssr/openfuwuqi.png" alt="查看用户名密码"></p>
+<blockquote>
+<p>这里有服务器的ip，以及root用户密码，然后直接就可以用Xshell连接了，如果连接不上有可能ip被之前用的人封了，这个时候别急着删服务器，先创建一个新的，再删，不然可能还会买到这个ip，如果决定换地区的话就不用管了。</p>
+</blockquote>
+<h2 id="0x01-脚本搭建ssr"><a href="#0x01-脚本搭建ssr" class="headerlink" title="0x01 脚本搭建ssr"></a>0x01 脚本搭建ssr</h2><blockquote>
+<p>这里我用的脚本搭建的，脚本的好处就是一个方便管理，一个方便搭建，不会产生什么组件版本问题之类的。<br>大致过程如下：<br>安装下载命令，有的系统会自带，不过可以输入一下看看有没有更新</p>
+</blockquote>
+<p><code>yum -y install wget</code></p>
+<p>获取脚本命令，并且赋予脚本执行权限，并且执行脚本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>这个命令和这三条命令是一模一样的  </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh</span><br><span class="line"></span><br><span class="line">chmod +x ssr.sh</span><br><span class="line"></span><br><span class="line">bash ssr.sh</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>还有个问题就是这个脚本地址好像失效了,可以点击<a href="https://pan.baidu.com/s/1Dq1L2ncM_4yu3mCvDXpx8A" target="_blank" rel="noopener">这里</a>下载  </p>
+</blockquote>
+<p><img src="https://ssssdl.github.io/img/guan-yu-ssr/jiaobenzhixing.png" alt="脚本执行"></p>
+<blockquote>
+<p>我觉得这个脚本的界面特别人性化，对我这种英语不好的简直就是福利啊，全是中文界面，个人感觉还是比较适合初学者。尤其是多端口、手机卡免流等配置起来极为方便，但如果进行一些高级操作单靠脚本还是不够，还是修改配置文件来的实在</p>
+</blockquote>
+<blockquote>
+<p>接下来当然是输入1安装ShadowsocksR</p>
+</blockquote>
+<blockquote>
+<p>弹出输入端口的提示<br>，输入的端口是你自己的设备连接ssr服务器用到的端口<br>，是服务器上的端口<br>，建议输入1024以后的端口  不要和其他服务的端口冲突<br>，不懂的话直接回车默认就好 2333  </p>
+</blockquote>
+<p><img src="https://ssssdl.github.io/img/guan-yu-ssr/duankouhemima.png" alt="端口和密码"></p>
+<blockquote>
+<p>接下来要输入密码，密码尽量复杂  </p>
+</blockquote>
+<blockquote>
+<p>接下来是输入加密方式，理论上随便选自己记得就行,看了一些教程好像选10的比较多，还有就是这里有几种加密方式比较容易弄混，好多后来连接不上都是这个原因  </p>
+</blockquote>
+<p><img src="https://ssssdl.github.io/img/guan-yu-ssr/jiami.png" alt="加密"></p>
+<blockquote>
+<p>选择协议 和上面差不多  选一个记住就好  建议选2（参照大佬的选择） 回车默认 记住就好</p>
+</blockquote>
+<blockquote>
+<p>兼容原版的问题<br>，建议这里输入y，这个应该是ss和ssr的问题 ，建议还是兼容原版，这样出错率低一些  </p>
+</blockquote>
+<p><img src="https://ssssdl.github.io/img/guan-yu-ssr/xieyijianrongyuanban.png" alt="协议兼容原版"></p>
+<blockquote>
+<p>关于混淆，如果要实现手机卡免流的话选2，不需要手机卡免流的话选1、plain速度快一些。如果想都实现可以看一下下面多端口的实现，每个端口可以有不同的配置，这里就随便选就行，手机卡免流需要这个http_simple插件混淆，添加上一些运营商的免流参数，<br>接下来还是输入y 回车 ，兼容原版选上吧，防止出问题。  </p>
+</blockquote>
+<p><img src="https://ssssdl.github.io/img/guan-yu-ssr/hunxiao.png" alt="混淆"></p>
+<blockquote>
+<p>端口限制：这是输入2333这个端口可以有多少台机器连接不建议太多，防止被别人连接不能第一时间发现,也不建议太少，可能出现连接不上等问题，再然后就是限速，单位是kb/s，自己用的话直接回车（不限速）就好了。，然后就是脚本执行安装ssr服务组件之类的了，过程中会有输Y回车阶段，出现下图配置成功。  </p>
+</blockquote>
+<p><img src="https://ssssdl.github.io/img/guan-yu-ssr/peizhichenggong.png" alt="配置成功"></p>
+<blockquote>
+<p>这个时候其实就可以用shadowsocksR连接了<br>，但是配置加速，要重启，所以就一并把加速配置了<br>，</p>
+</blockquote>
+<blockquote>
+<p>还有：这里已经可以用 bash ssr.sh 运行脚本管ssr服务了</p>
+</blockquote>
+<h2 id="0x02-配置BBR加速"><a href="#0x02-配置BBR加速" class="headerlink" title="0x02 配置BBR加速"></a>0x02 配置BBR加速</h2><blockquote>
+<p>个人感觉这个加速效果一般但聊胜于无，锐速的加速好像要钱，也没试过，我搭建这个也不是为了打游戏，所以就讲究着用了</p>
+</blockquote>
+<blockquote>
+<p>配置很简单，三条命令（也是某大佬的脚本，但我看了几篇博客基本都是这么配的），中间会有几次输入y回车，还有一次重启，断开ssh</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</span><br><span class="line"></span><br><span class="line">chmod +x bbr.sh</span><br><span class="line"></span><br><span class="line">./bbr.sh</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>稍等一会重新用Xshell连接服务器<br>输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsmod | grep bbr</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>出现如下结果就算配置成功了  </p>
+</blockquote>
+<p><img src="https://ssssdl.github.io/img/guan-yu-ssr/bbrchenggong.png" alt="配置成功"></p>
+<h2 id="0x03-shadowsocksr客户端配置"><a href="#0x03-shadowsocksr客户端配置" class="headerlink" title="0x03 shadowsocksr客户端配置"></a>0x03 shadowsocksr客户端配置</h2><blockquote>
+<p>windows端：<a href="https://github.com/shadowsocksrr/shadowsocksr-csharp/releases​" target="_blank" rel="noopener">https://github.com/shadowsocksrr/shadowsocksr-csharp/releases​</a></p>
+</blockquote>
+<blockquote>
+<p>android端：<a href="https://github.com/shadowsocksr-backup/shadowsocksr-android/releases​" target="_blank" rel="noopener">https://github.com/shadowsocksr-backup/shadowsocksr-android/releases​</a></p>
+</blockquote>
+<blockquote>
+<p>ios端： Shadowrocket，这个好像要注册国外的apple id才可以买得到、才可以买得到、买得到。。。</p>
+</blockquote>
+<blockquote>
+<p>mac：ssr客户端貌似有mac版本</p>
+</blockquote>
+<blockquote>
+<p>客户端最好下载ssr不要下载ss，ss据说容易被发现，ssr在混淆上做了处理不容易被发现</p>
+</blockquote>
+<blockquote>
+<p>没有ios 也没mac 这里就说一下Windows和android吧</p>
+</blockquote>
+<blockquote>
+<p>启动shadowsocksR后右下角状态栏会有一个小飞机的标志，单击改服务器配置，右键设置本地，服务器配置不用说，按照配置成功出现那个，有的就填上，没有就空着，本地注意，系统代理模式，选择全局代理或者pac，全局代理就是全都走ssr服务器，pac就是该走的走本地， 遇到墙的走ssr，如果要实现ipv6免流就要用全局，正常的话pac就可以。</p>
+</blockquote>
+<blockquote>
+<p>在windows设置里面设置好代理 网络和Internet设置-&gt;代理<br>，手动设置代理服务器 使用代理服务器 开<br>，地址127.0.0.1 端口一般1080<br> 这个好像和服务器上的要一致</p>
+</blockquote>
+<blockquote>
+<p>都配置完了如果是全局代理百度IP就会是你服务器的IP，pac直接上google看看能不能行</p>
+</blockquote>
+<blockquote>
+<p>注意：上面要用google浏览器查ip，因为不知道为啥google浏览器可以直接走系统代理，其余很多软件都要自己找到配置代理的地方去配置，除非你有下面这个软件</p>
+</blockquote>
+<h2 id="0x04-Profixier实现全局代理"><a href="#0x04-Profixier实现全局代理" class="headerlink" title="0x04 Profixier实现全局代理"></a>0x04 Profixier实现全局代理</h2><blockquote>
+<p>有的软件和浏览器可能出现无法访问代理服务器的问题，这时候就要 和Profixier搭配一起用，有的软件会支持Socks5，但要单独配置，所以还是学着用一下这个软件比较好 </p>
+</blockquote>
+<blockquote>
+<p>中文版：配置文件-&gt;代理服务器-&gt;添加 配置如下  </p>
+</blockquote>
+<p><img src="https://ssssdl.github.io/img/guan-yu-ssr/profixier.png" alt="profixier">  </p>
+<h2 id="0x05-手机免流问题"><a href="#0x05-手机免流问题" class="headerlink" title="0x05 手机免流问题"></a>0x05 手机免流问题</h2><blockquote>
+<p>android手机连接的时候下载shadowsock和shadowsockR都可以连接，但是要实现免流还是要用 shadowsockR，配置除了混淆参数基本上和电脑差不多，按照终端里面返回成功的信息配置就可以了</p>
+</blockquote>
+<blockquote>
+<p>注意实现免流要添加免流参数，不同运营商混淆参数不同，具体混淆参数可以参考这位大佬在github的<a href="https://gist.github.com/movii/a3e8482682df8417ee8413a8708eb419" target="_blank" rel="noopener">分享</a></p>
+</blockquote>
+<blockquote>
+<p>比如我是电信，配置如下，我手机就会走电信爱看流量</p>
+</blockquote>
+<p><img src="https://ssssdl.github.io/img/guan-yu-ssr/hunxiaocanshu.png" alt="注意画圈的地方">  </p>
+<h2 id="0x06-多端口实现"><a href="#0x06-多端口实现" class="headerlink" title="0x06 多端口实现"></a>0x06 多端口实现</h2><blockquote>
+<p>还是运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash ssr.sh</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>9  y 切换到多端口模式<br>然后之前的单端口的所有配置都失效，要从新按照单端口配置一遍，注意这次混淆记得选plain（网速快）,手机免流单独配置一个http_simple的端口就可以了</p>
+</blockquote>
+<blockquote>
+<p>一切配置完成后，注意把电脑上的混淆设置成plain（我这个排序是不是有点折腾人）</p>
+</blockquote>
+<blockquote>
+<p>下面说一下这个脚本最大的问题，就是如果这时候运行脚本，选择7 设置 用户配置<br>-&gt;1添加 用户配置，你会发现你添加的所有端口除了密码其余的配置都是相同的，这。。。个人用的话感觉有点鸡肋啊</p>
+</blockquote>
+<blockquote>
+<p>于是我找了很多大佬的博客终于发现了改配置文件的方法（还是配置文件好用）</p>
+</blockquote>
+<blockquote>
+<p>多端口模式下执行脚本ssr.sh输入8</p>
+</blockquote>
+<blockquote>
+<p>编辑配置文件如下添加2334端口混淆是http_simple  </p>
+</blockquote>
+<p><img src="https://ssssdl.github.io/img/guan-yu-ssr/duoduankou.png" alt="多端口配置">  </p>
+<blockquote>
+<p>注意逗号和引号,保存退出如果编辑不成功就会提示服务启动失败，编辑成功会显示服务启动成功，然后是一堆奇奇怪怪的提示 不用管，记住自己的配置，直接在客户端上面配置就可以了，比如我这个就可以实现电脑速度快，手机免流</p>
+</blockquote>
+<h2 id="0x07-IPV6校园网免流"><a href="#0x07-IPV6校园网免流" class="headerlink" title="0x07  IPV6校园网免流"></a>0x07  IPV6校园网免流</h2><blockquote>
+<p>这个实现看起来比较复杂但其实是最简单的了</p>
+</blockquote>
+<blockquote>
+<p>上面说到如果要实现校园网免流就要在创建服务器的时候勾选使用IPV6，然后找到自己的ipv6地址直接把windows上的ipv4的地址改成ipv6的地址就可以了，但为了方便就像我这样弄两个，需要的时候右键小飞机—&gt;服务器 切换就可以了<br>如果建立服务器时没有勾选ipv6也没关系， vultr比较人性化的可以在网站上启动ipv6，还有一写帮助文档，帮助你快速修改配置文件，修改好了之后就和开始勾选ipv6一样了  </p>
+</blockquote>
+<blockquote>
+<p>当你用ipv6连接好了之后记得把校园网客户端（Dr，锐捷）在任务管理器里面结束掉，不然还会走校园网</p>
+</blockquote>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><blockquote>
+<p>感觉这个当时记得有点啰嗦</p>
+</blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论（请确保 disqus 可以正常加载）</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://blog.ssssdl.xyz/2018/08/23/关于SSR/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://blog.ssssdl.xyz/2018/08/23/关于SSR/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//ssssdl.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//ssssdl.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2018/08/24/安装多系统/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/08/21/svn泄露利用脚本/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="ssssdl's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        ssssdl@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:ssssdl@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">5</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/hello/">hello<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/环境配置/">环境配置<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/环境配置/linux/">linux<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/基本操作/">基本操作<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/网络安全/">网络安全<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/网络安全/">网络安全<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tags" title="tags">
+                
+                tags
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about" title="关于我">
+                
+                关于我
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友情链接">
+                
+                友情链接
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">19</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>ssssdl
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?wgjW/HuQG9JDgvPDPoRAng==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

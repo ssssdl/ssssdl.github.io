@@ -232,7 +232,7 @@
   <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2018%2F05%2F16%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment Git设置代理（突然中文~）1234567891011#socks代理$git config --global http.proxy &apos;socks5://127.0.0.1:1080&apos;$git config --global https.proxy &apos;socks5://127.0.0.1:1080&apos;#http代理$git config --global https.proxy http://127.0.0.1:1080$git config --global https.proxy https://127.0.0.1:1080#取消代理$git config --global --unset http.proxy$git config --global --unset https.proxy 设置域名 申请域名，添加添加一个CNAME指向GitHub上的博客 在GitHub上面设置里面GitHub Pages里面的Custom domain添加上自己的域名 但是2其实并没有什么用。你下次更新博客的时候又会还原到最初状态。 真正的解决办法是在本地source目录下添加一个叫CNAME的文件。里面写上自己的域名。不带https啥的。就是一个纯域名，然后重新更新博客]]></content>
       <categories>
         <category>hello</category>
       </categories>

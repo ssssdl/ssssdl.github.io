@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.ssssdl.xyz/"/>
-  <updated>2019-01-16T04:19:50.179Z</updated>
+  <updated>2019-03-18T07:53:20.267Z</updated>
   <id>http://blog.ssssdl.xyz/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>重新认识XSS</title>
+    <link href="http://blog.ssssdl.xyz/2019/03/18/%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86XSS/"/>
+    <id>http://blog.ssssdl.xyz/2019/03/18/重新认识XSS/</id>
+    <published>2019-03-18T07:49:41.000Z</published>
+    <updated>2019-03-18T07:53:20.267Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="网络安全" scheme="http://blog.ssssdl.xyz/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="XSS" scheme="http://blog.ssssdl.xyz/tags/XSS/"/>
+    
+  </entry>
   
   <entry>
     <title>子域名挖掘工具aquatone</title>
@@ -480,9 +506,9 @@
     
       <category term="Android" scheme="http://blog.ssssdl.xyz/tags/Android/"/>
     
-      <category term="xml" scheme="http://blog.ssssdl.xyz/tags/xml/"/>
-    
       <category term="Java" scheme="http://blog.ssssdl.xyz/tags/Java/"/>
+    
+      <category term="xml" scheme="http://blog.ssssdl.xyz/tags/xml/"/>
     
   </entry>
   
@@ -510,9 +536,9 @@
     
       <category term="Android" scheme="http://blog.ssssdl.xyz/tags/Android/"/>
     
-      <category term="Java" scheme="http://blog.ssssdl.xyz/tags/Java/"/>
-    
       <category term="代码技巧" scheme="http://blog.ssssdl.xyz/tags/%E4%BB%A3%E7%A0%81%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="Java" scheme="http://blog.ssssdl.xyz/tags/Java/"/>
     
   </entry>
   
@@ -540,9 +566,9 @@
     
       <category term="Android" scheme="http://blog.ssssdl.xyz/tags/Android/"/>
     
-      <category term="xml" scheme="http://blog.ssssdl.xyz/tags/xml/"/>
-    
       <category term="Java" scheme="http://blog.ssssdl.xyz/tags/Java/"/>
+    
+      <category term="xml" scheme="http://blog.ssssdl.xyz/tags/xml/"/>
     
   </entry>
   

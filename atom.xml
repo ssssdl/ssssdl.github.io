@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.ssssdl.xyz/"/>
-  <updated>2019-03-19T10:19:15.112Z</updated>
+  <updated>2019-04-29T13:09:57.248Z</updated>
   <id>http://blog.ssssdl.xyz/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>html内容安全策略</title>
+    <link href="http://blog.ssssdl.xyz/2019/04/29/html%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5/"/>
+    <id>http://blog.ssssdl.xyz/2019/04/29/html内容安全策略/</id>
+    <published>2019-04-29T13:07:04.000Z</published>
+    <updated>2019-04-29T13:09:57.248Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="网络安全" scheme="http://blog.ssssdl.xyz/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="html" scheme="http://blog.ssssdl.xyz/tags/html/"/>
+    
+      <category term="CSP" scheme="http://blog.ssssdl.xyz/tags/CSP/"/>
+    
+      <category term="安全配置" scheme="http://blog.ssssdl.xyz/tags/%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>XSS Shell环境搭建及功能介绍</title>
@@ -92,9 +122,9 @@
       <category term="网络安全" scheme="http://blog.ssssdl.xyz/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
     
     
-      <category term="子域名" scheme="http://blog.ssssdl.xyz/tags/%E5%AD%90%E5%9F%9F%E5%90%8D/"/>
-    
       <category term="kali" scheme="http://blog.ssssdl.xyz/tags/kali/"/>
+    
+      <category term="子域名" scheme="http://blog.ssssdl.xyz/tags/%E5%AD%90%E5%9F%9F%E5%90%8D/"/>
     
   </entry>
   
@@ -153,11 +183,11 @@
   </entry>
   
   <entry>
-    <title>教你如何放弃Windows改用kali</title>
-    <link href="http://blog.ssssdl.xyz/2018/08/24/%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E6%94%BE%E5%BC%83Windows%E6%94%B9%E7%94%A8kali/"/>
-    <id>http://blog.ssssdl.xyz/2018/08/24/教你如何放弃Windows改用kali/</id>
+    <title>学习改用kali为主要系统</title>
+    <link href="http://blog.ssssdl.xyz/2018/08/24/%E5%AD%A6%E4%B9%A0%E6%94%B9%E7%94%A8kali%E4%B8%BA%E4%B8%BB%E8%A6%81%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://blog.ssssdl.xyz/2018/08/24/学习改用kali为主要系统/</id>
     <published>2018-08-24T05:47:27.000Z</published>
-    <updated>2018-08-24T13:27:05.065Z</updated>
+    <updated>2019-03-22T00:56:19.069Z</updated>
     
     <summary type="html">
     
@@ -534,9 +564,9 @@
     
       <category term="Android" scheme="http://blog.ssssdl.xyz/tags/Android/"/>
     
-      <category term="Java" scheme="http://blog.ssssdl.xyz/tags/Java/"/>
-    
       <category term="xml" scheme="http://blog.ssssdl.xyz/tags/xml/"/>
+    
+      <category term="Java" scheme="http://blog.ssssdl.xyz/tags/Java/"/>
     
   </entry>
   
@@ -564,9 +594,9 @@
     
       <category term="Android" scheme="http://blog.ssssdl.xyz/tags/Android/"/>
     
-      <category term="代码技巧" scheme="http://blog.ssssdl.xyz/tags/%E4%BB%A3%E7%A0%81%E6%8A%80%E5%B7%A7/"/>
-    
       <category term="Java" scheme="http://blog.ssssdl.xyz/tags/Java/"/>
+    
+      <category term="代码技巧" scheme="http://blog.ssssdl.xyz/tags/%E4%BB%A3%E7%A0%81%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
@@ -594,9 +624,9 @@
     
       <category term="Android" scheme="http://blog.ssssdl.xyz/tags/Android/"/>
     
-      <category term="Java" scheme="http://blog.ssssdl.xyz/tags/Java/"/>
-    
       <category term="xml" scheme="http://blog.ssssdl.xyz/tags/xml/"/>
+    
+      <category term="Java" scheme="http://blog.ssssdl.xyz/tags/Java/"/>
     
   </entry>
   

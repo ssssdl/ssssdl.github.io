@@ -187,7 +187,7 @@
     <link href="http://blog.ssssdl.xyz/2018/08/24/%E5%AD%A6%E4%B9%A0%E6%94%B9%E7%94%A8kali%E4%B8%BA%E4%B8%BB%E8%A6%81%E7%B3%BB%E7%BB%9F/"/>
     <id>http://blog.ssssdl.xyz/2018/08/24/学习改用kali为主要系统/</id>
     <published>2018-08-24T05:47:27.000Z</published>
-    <updated>2019-04-29T13:11:48.613Z</updated>
+    <updated>2019-04-29T13:14:18.316Z</updated>
     
     <summary type="html">
     
@@ -397,7 +397,7 @@
     <link href="http://blog.ssssdl.xyz/2018/08/21/svn%E6%B3%84%E9%9C%B2%E5%88%A9%E7%94%A8%E8%84%9A%E6%9C%AC/"/>
     <id>http://blog.ssssdl.xyz/2018/08/21/svn泄露利用脚本/</id>
     <published>2018-08-21T08:58:20.000Z</published>
-    <updated>2019-04-29T13:11:59.775Z</updated>
+    <updated>2019-04-29T13:14:13.694Z</updated>
     
     <summary type="html">
     
@@ -412,8 +412,6 @@
     </summary>
     
       <category term="网络安全" scheme="http://blog.ssssdl.xyz/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-      <category term="编程" scheme="http://blog.ssssdl.xyz/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E7%BC%96%E7%A8%8B/"/>
     
     
       <category term="python" scheme="http://blog.ssssdl.xyz/tags/python/"/>

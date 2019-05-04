@@ -248,7 +248,7 @@
 
     
         <meta property="article:published_time" content="Mon Apr 29 2019 21:07:04 GMT+0800">
-        <meta property="article:modified_time" content="Mon Apr 29 2019 21:09:57 GMT+0800">
+        <meta property="article:modified_time" content="Sat May 04 2019 22:35:40 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -271,7 +271,7 @@
     "mainEntityOfPage": "http://blog.ssssdl.xyz/2019/04/29/html内容安全策略/index.html",
     "headline": "html内容安全策略",
     "datePublished": "Mon Apr 29 2019 21:07:04 GMT+0800",
-    "dateModified": "Mon Apr 29 2019 21:09:57 GMT+0800",
+    "dateModified": "Sat May 04 2019 22:35:40 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "ssssdl",
@@ -509,7 +509,8 @@
 <p>什么都不会就直接上一个默认限制就行了,例如<code>Content-Security-Policy: default-src &#39;self&#39;</code>限制资源只能从本地加载，不管是js，还是图片，都只能从本地加载</p>
 </blockquote>
 <h2 id="详细的资源加载限制-摘自知乎-阿里聚安全"><a href="#详细的资源加载限制-摘自知乎-阿里聚安全" class="headerlink" title="详细的资源加载限制(摘自知乎:阿里聚安全)"></a>详细的资源加载限制(摘自<a href="https://www.zhihu.com/question/21979782/answer/122682029" target="_blank" rel="noopener">知乎:阿里聚安全</a>)</h2><blockquote>
-<p>可以对每种资源进行详细的加载限制</p>
+<p>可以对每种资源进行详细的加载限制  </p>
+</blockquote>
 <ul>
 <li><code>script-src</code> 外部脚本加载限制</li>
 <li><code>style-src</code> 样式表</li>
@@ -521,26 +522,35 @@
 <li><code>frame-ancestors</code>嵌入的外部资源（比如\&lt;frame>、\&lt;iframe>、\&lt;embed>和\&lt;applet>）</li>
 <li><code>connect-src</code>HTTP 连接（通过 XHR、WebSockets、EventSource等）</li>
 <li><code>worker-src</code> worker脚本</li>
-<li><code>manifest-src</code> manifest 文件<br>url相关</li>
-<li><code>frame-ancestors</code> 限制嵌入框架的网页</li>
+<li><p><code>manifest-src</code> manifest 文件</p>
+<blockquote>
+<p>url相关  </p>
+</blockquote>
+</li>
+<li><p><code>frame-ancestors</code> 限制嵌入框架的网页</p>
+</li>
 <li><code>base-uri</code> 限制 <code>&lt;base#href&gt;</code></li>
-<li><code>form-action</code> 限制 <code>&lt;form#action&gt;</code><br>其他其他安全相关</li>
-<li><code>block-all-mixed-content</code>：HTTPS 网页不得加载 HTTP 资源（浏览器已经默认开启）</li>
+<li><p><code>form-action</code> 限制 <code>&lt;form#action&gt;</code></p>
+<blockquote>
+<p>其他其他安全相关  </p>
+</blockquote>
+</li>
+<li><p><code>block-all-mixed-content</code>：HTTPS 网页不得加载 HTTP 资源（浏览器已经默认开启）</p>
+</li>
 <li><code>upgrade-insecure-requests</code>：自动将网页上所有加载外部资源的 HTTP 链接换成 HTTPS 协议 相关类似的还有<a href="https://developer.mozilla.org/zh-CN/docs/Security/HTTP_Strict_Transport_Securityv" target="_blank" rel="noopener">HTTP Strict Transport Security</a></li>
 <li><code>plugin-types</code>：限制可以使用的插件格式</li>
 <li><code>sandbox</code>：浏览器行为的限制，比如不能有弹出窗口等。</li>
 </ul>
-</blockquote>
 <h2 id="将违例内容进行反馈报告"><a href="#将违例内容进行反馈报告" class="headerlink" title="将违例内容进行反馈报告"></a>将违例内容进行反馈报告</h2><blockquote>
-<p>需要在CSP规则中写明report-uri策略，然后参数中有一个地址接收这些报告，报告格式是json<br>大概写法事这个样子拿apache配置为例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Header set Content-Security-Policy &quot;default-src &apos;self&apos;;report-uri http://12.12.12.12:7777&quot;</span><br></pre></td></tr></table></figure></p>
+<p>需要在CSP规则中写明report-uri策略，然后参数中有一个地址接收这些报告，报告格式是json<br>大概写法事这个样子拿apache配置为例  </p>
 </blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Header set Content-Security-Policy &quot;default-src &apos;self&apos;;report-uri http://12.12.12.12:7777&quot;</span><br></pre></td></tr></table></figure>
 <p>返回的json大概如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;csp-report&quot;:&#123;</span><br><span class="line">        &quot;document-uri&quot;:&quot;http://hhhhh.com/&quot;,</span><br><span class="line">        &quot;referrer&quot;:&quot;&quot;,</span><br><span class="line">        &quot;violated-directive&quot;:&quot;script-src-elem&quot;,</span><br><span class="line">        &quot;effective-directive&quot;:&quot;script-src-elem&quot;,</span><br><span class="line">        &quot;original-policy&quot;:&quot;default-src &apos;self&apos;;report-uri http://12.12.12.12:7777&quot;,</span><br><span class="line">        &quot;disposition&quot;:&quot;enforce&quot;,</span><br><span class="line">        &quot;blocked-uri&quot;:&quot;https://xss.pt/XUXds&quot;,</span><br><span class="line">        &quot;status-code&quot;:200,</span><br><span class="line">        &quot;script-sample&quot;:&quot;&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><ul>
-<li>配置虚拟主机<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost 12.12.12.12:80&gt;</span><br><span class="line">  DocumentRoot &quot;/var/www/ipv4&quot;</span><br><span class="line">  ServerName    hhhhh.com</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line">Header set Content-Security-Policy &quot;default-src &apos;self&apos;;&quot;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>重启apache服务，查看响应头是否含有Content-Security-Policy： default-src ‘self’;</p>
-<ul>
+<li><p>配置虚拟主机</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost 12.12.12.12:80&gt;</span><br><span class="line">  DocumentRoot &quot;/var/www/ipv4&quot;</span><br><span class="line">  ServerName    hhhhh.com</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line">Header set Content-Security-Policy &quot;default-src &apos;self&apos;;&quot;</span><br></pre></td></tr></table></figure>
+<pre><code>重启apache服务，查看响应头是否含有Content-Security-Policy： default-src &apos;self&apos;;
+</code></pre></li>
 <li>到页面中加载远程脚本<br>&lt;sCRiPt sRC=<a href="https://xss.pt/XUXdj&gt;" target="_blank" rel="noopener">https://xss.pt/XUXdj&gt;</a></li>
 <li>然后这时浏览器就会报错<br>比如chrome：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Refused to load the script &apos;https://xss.pt/XUXdj&apos; because it violates the following Content Security Policy http://hhhhhh.com directive: &quot;default-src &apos;self&apos;&quot;. Note that &apos;script-src-elem&apos; was not explicitly set, so &apos;default-src&apos; is used as a fallback.</span><br></pre></td></tr></table></figure>
 </li>

@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ssrf IP限制绕过思路]]></title>
+    <url>%2F2019%2F07%2F12%2Fssrf-IP%E9%99%90%E5%88%B6%E7%BB%95%E8%BF%87%E6%80%9D%E8%B7%AF%2F</url>
+    <content type="text"><![CDATA[总结一些最近遇到的问题，感觉有点不在状态，英语有挂科了，技术摸底也没过、早上骑车半路脚蹬还掉了一个。 看了一些师傅们的博客，简单搬运一下 使用http用户名密码语法，就是@，形如admin@123.123.123.123 多级域名 使用十六进制0xC0.0xA8.0.1等进制转换， IP缩写10.0.0.1可以写成10.1（未验证） 利用302跳转 附上简易跳转脚本 12345678 &lt;?php$ip = $_GET[&apos;ip&apos;];$port = $_GET[&apos;port&apos;];$scheme = $_GET[&apos;s&apos;];$data = $_GET[&apos;data&apos;];header(&quot;Location: $scheme://$ip:$port/$data&quot;);?&gt; url短网址，但是有一些短网址不支持使用ip生成，tinyurl支持， 使用http://xip.io,可以将192.168.0.1.xip.io解析到192.168.0.1，然后可以配合url短网址绕过 利用其他相关协议 DNS Rebinding 先准备一个域名，绑定一个非内网的IP，设置TTL为0，这样服务器请求的时候会每次都解析一下这个域名。 然后将这个域名的url提交给服务器存在ssrf的点，这时服务器会第一次进行解析域名，判断IP不是内网IP，然后通过验证。 服务器通过验证后会对URL中的域名第二次解析(TTL为0)，然后这时修改掉域名指定的IP为内网IP，然后就会返回请求内网资源的结果。 然后这个的一些问题：DNS缓存，有的DNS服务器即使TTL设置为0也会缓存。 类似的一个绕过方法，ip双重绑定绕过： php获取IP的时候使用gethoostname或者dns_get_record这两个函数，如果一个域名绑定了两个IP,dns_get_record就会返回两个，gethostname就会随机返回一个，但是curl访问域名的时候会尝试访问每一个，如果外网的端口关闭，就会返回内网端口的开放情况。 相关连接 CSDN DNS Rebinding技术绕过SSRF/代理IP限制 FreeBuf SSRF漏洞中绕过IP限制的几种方法总结 CSDN 【漏洞学习——SSRF】360某处ssrf漏洞可探测内网信息]]></content>
+      <categories>
+        <category>网络安全</category>
+      </categories>
+      <tags>
+        <tag>ssrf</tag>
+        <tag>绕过</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[分享一个炫酷的终端工具Tmux]]></title>
     <url>%2F2019%2F05%2F09%2F%E5%88%86%E4%BA%AB%E4%B8%80%E4%B8%AA%E7%82%AB%E9%85%B7%E7%9A%84%E7%BB%88%E7%AB%AF%E5%B7%A5%E5%85%B7Tmux%2F</url>
-    <content type="text"><![CDATA[简单介绍一下：Tmux是一个非常炫酷的终端复用工具，一图胜千言 这是一个关于Tmux配置的项目的介绍文档里面的图项目地址 基础介绍几个要清楚的概念 session（会话） window（窗口） pane（窗格） 就是从上倒下一环套一环，session是tmux工作区会话，里面会有一个或者几个Window，然后windows里面又有很多pane 记录几个快速入门的快捷键12345# 左右拆分终端(注意，输入%时按着shift 就是shift+打字区的5)ctrl+b %# 上下拆分终端ctrl+b &quot;# 关闭某个终端 命令速查 https://blog.csdn.net/hcx25909/article/details/7602935 https://www.cnblogs.com/EasonJim/p/7863099.html]]></content>
+    <content type="text"><![CDATA[简单介绍一下：Tmux是一个非常炫酷的终端复用工具，一图胜千言 这是一个关于Tmux配置的项目的介绍文档里面的图项目地址,可以按照这个配置。 基础介绍1sudo apt-get install tmux 几个要清楚的概念 session（会话） window（窗口） pane（窗格） 就是从上倒下一环套一环，session是tmux工作区会话，里面会有一个或者几个Window，然后windows里面又有很多pane 记录几个快速入门的快捷键12345678910# 左右拆分终端(注意，输入%时按着shift 就是shift+打字区的5)ctrl+b %# 上下拆分终端ctrl+b &quot;# 关闭某个窗格ctrl+d# 打开时钟限制ctrl+b t# 切换窗格ctrl+b o 命令速查 tmux快捷键 配合oh my zsh体验更佳Ubuntu 16.04下安装zsh和oh-my-zsh]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>环境优化</tag>
+        <tag>Tmux</tag>
+        <tag>有趣</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[html内容安全策略]]></title>
@@ -49,8 +69,8 @@
         <category>网络安全</category>
       </categories>
       <tags>
-        <tag>kali</tag>
         <tag>子域名</tag>
+        <tag>kali</tag>
       </tags>
   </entry>
   <entry>
@@ -175,8 +195,8 @@
         <category>网络安全</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>svn泄露</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>

@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",环境优化,Tmux,有趣">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -244,11 +244,11 @@
     <meta property="og:title" content="分享一个炫酷的终端工具Tmux | ssssdl">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="环境优化"> <meta property="og:article:tag" content="Tmux"> <meta property="og:article:tag" content="有趣"> 
 
     
         <meta property="article:published_time" content="Thu May 09 2019 21:38:38 GMT+0800">
-        <meta property="article:modified_time" content="Thu May 09 2019 23:25:28 GMT+0800">
+        <meta property="article:modified_time" content="Fri Jul 12 2019 11:22:11 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -271,7 +271,7 @@
     "mainEntityOfPage": "http://blog.ssssdl.xyz/2019/05/09/分享一个炫酷的终端工具Tmux/index.html",
     "headline": "分享一个炫酷的终端工具Tmux",
     "datePublished": "Thu May 09 2019 21:38:38 GMT+0800",
-    "dateModified": "Thu May 09 2019 23:25:28 GMT+0800",
+    "dateModified": "Fri Jul 12 2019 11:22:11 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "ssssdl",
@@ -289,7 +289,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": "",
+    "keywords": ",环境优化,Tmux,有趣",
     "description": "",
 }
 </script>
@@ -424,6 +424,15 @@
 
     <!-- Tags (bookmark) -->
     
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Tmux/">Tmux</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/有趣/">有趣</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/环境优化/">环境优化</a>
+    </ul>
+    
 
     <!-- Share -->
     
@@ -480,8 +489,9 @@
     
         <p>简单介绍一下：Tmux是一个非常炫酷的终端复用工具，一图胜千言</p>
 <p><img src="https://i.loli.net/2019/05/09/5cd42fb559be5.gif" alt="85596a5a-9bbf-11e6-8aa1-7c8d9829c008.gif"></p>
-<p>这是一个关于Tmux配置的项目的介绍文档里面的图<a href="https://github.com/gpakosz/.tmux" target="_blank" rel="noopener">项目地址</a></p>
-<h1 id="基础介绍"><a href="#基础介绍" class="headerlink" title="基础介绍"></a>基础介绍</h1><h2 id="几个要清楚的概念"><a href="#几个要清楚的概念" class="headerlink" title="几个要清楚的概念"></a>几个要清楚的概念</h2><ul>
+<p>这是一个关于Tmux配置的项目的介绍文档里面的图<a href="https://github.com/gpakosz/.tmux" target="_blank" rel="noopener">项目地址</a>,可以按照这个配置。</p>
+<h1 id="基础介绍"><a href="#基础介绍" class="headerlink" title="基础介绍"></a>基础介绍</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install tmux</span><br></pre></td></tr></table></figure>
+<h2 id="几个要清楚的概念"><a href="#几个要清楚的概念" class="headerlink" title="几个要清楚的概念"></a>几个要清楚的概念</h2><ul>
 <li>session（会话）</li>
 <li>window（窗口）</li>
 <li>pane（窗格）<blockquote>
@@ -489,10 +499,12 @@
 </blockquote>
 </li>
 </ul>
-<h2 id="记录几个快速入门的快捷键"><a href="#记录几个快速入门的快捷键" class="headerlink" title="记录几个快速入门的快捷键"></a>记录几个快速入门的快捷键</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 左右拆分终端(注意，输入%时按着shift 就是shift+打字区的5)</span><br><span class="line">ctrl+b %</span><br><span class="line"># 上下拆分终端</span><br><span class="line">ctrl+b &quot;</span><br><span class="line"># 关闭某个终端</span><br></pre></td></tr></table></figure>
-<p><a href="https://gist.github.com/ryerh/14b7c24dfd623ef8edc7" target="_blank" rel="noopener">命令速查</a></p>
-<p><a href="https://blog.csdn.net/hcx25909/article/details/7602935" target="_blank" rel="noopener">https://blog.csdn.net/hcx25909/article/details/7602935</a></p>
-<p><a href="https://www.cnblogs.com/EasonJim/p/7863099.html" target="_blank" rel="noopener">https://www.cnblogs.com/EasonJim/p/7863099.html</a></p>
+<h2 id="记录几个快速入门的快捷键"><a href="#记录几个快速入门的快捷键" class="headerlink" title="记录几个快速入门的快捷键"></a>记录几个快速入门的快捷键</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 左右拆分终端(注意，输入%时按着shift 就是shift+打字区的5)</span><br><span class="line">ctrl+b %</span><br><span class="line"># 上下拆分终端</span><br><span class="line">ctrl+b &quot;</span><br><span class="line"># 关闭某个窗格</span><br><span class="line">ctrl+d</span><br><span class="line"># 打开时钟限制</span><br><span class="line">ctrl+b t</span><br><span class="line"># 切换窗格</span><br><span class="line">ctrl+b o</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="https://gist.github.com/ryerh/14b7c24dfd623ef8edc7" target="_blank" rel="noopener">命令速查</a></li>
+<li><a href="https://blog.csdn.net/hcx25909/article/details/7602935" target="_blank" rel="noopener">tmux快捷键</a></li>
+<li>配合oh my zsh体验更佳<a href="https://www.cnblogs.com/EasonJim/p/7863099.html" target="_blank" rel="noopener">Ubuntu 16.04下安装zsh和oh-my-zsh</a></li>
+</ul>
 
         
     
@@ -597,6 +609,14 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
+        <a href="/2019/07/12/ssrf-IP限制绕过思路/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
@@ -695,7 +715,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">三月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">5</span></a>
+                <a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">三月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">5</span></a>
             </ul>
         </li>
         
@@ -713,7 +733,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/hello/">hello<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/环境配置/">环境配置<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/环境配置/linux/">linux<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/基本操作/">基本操作<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/网络安全/">网络安全<span class="sidebar_archives-count">7</span></a>
+                <a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/hello/">hello<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/环境配置/">环境配置<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/环境配置/linux/">linux<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/基本操作/">基本操作<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/网络安全/">网络安全<span class="sidebar_archives-count">8</span></a>
             </ul>
         </li>
         
@@ -769,7 +789,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">23</span>
+                <span class="sidebar-badge">24</span>
             </a>
         </li>
         

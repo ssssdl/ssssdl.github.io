@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>nw.js打包客户端配合XSS命令执行</title>
+      <link href="/2019/08/21/nw-js%E6%89%93%E5%8C%85%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E5%90%88XSS%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+      <url>/2019/08/21/nw-js%E6%89%93%E5%8C%85%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E5%90%88XSS%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/</url>
+      <content type="html"><![CDATA[<h2 id="一次实际渗透测试中遇到的，感觉还挺有意思，就不放截图了。"><a href="#一次实际渗透测试中遇到的，感觉还挺有意思，就不放截图了。" class="headerlink" title="一次实际渗透测试中遇到的，感觉还挺有意思，就不放截图了。"></a>一次实际渗透测试中遇到的，感觉还挺有意思，就不放截图了。</h2><h1 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h1><p>nw.js是一种桌面程序的解决方案，感觉可以想象成Android中的webview，但是利用了Qt之类的引擎使得浏览器中的js可以和系统的代码进行交互，</p><h1 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h1><p>有一个存储的XSS，利用nw.js就可以放大XSS的威力，实现客户端的命令执行</p><h1 id="payload"><a href="#payload" class="headerlink" title="payload"></a>payload</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">弹计算器&lt;script&gt; var cp = require(&apos;child_process&apos;); cp.exec(&quot;calc.exe&quot;, function(error, stdout, stderr) &#123;&#125;);&lt;/script&gt;</span><br></pre></td></tr></table></figure><h2 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h2><p>child_process是nw.exe的一个内置模块，通过它可以实现创建多线程，并可实现主线程和子线程之间的通信。child_process模块中主要使用有两个方法spawn和exec，这两个方法都可以用来创建子线程。除了spawn和exec外，child_process模块还有execFile,fork,spawnSync,execFileSync,execSync，它们都是基于spawn的不同封装。</p>]]></content>
+      
+      <categories>
+          
+          <category> 网络安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> XSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>burpSuite内置浏览器初始化失败的几种解决方法</title>
       <link href="/2019/08/19/burpSuite%E5%86%85%E7%BD%AE%E6%B5%8F%E8%A7%88%E5%99%A8%E5%88%9D%E5%A7%8B%E5%8C%96%E5%A4%B1%E8%B4%A5%E7%9A%84%E5%87%A0%E7%A7%8D%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
       <url>/2019/08/19/burpSuite%E5%86%85%E7%BD%AE%E6%B5%8F%E8%A7%88%E5%99%A8%E5%88%9D%E5%A7%8B%E5%8C%96%E5%A4%B1%E8%B4%A5%E7%9A%84%E5%87%A0%E7%A7%8D%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
@@ -18,6 +39,8 @@
         <tags>
             
             <tag> burpSuite </tag>
+            
+            <tag> 环境配置 </tag>
             
         </tags>
       
@@ -178,9 +201,9 @@
       
         <tags>
             
-            <tag> 子域名 </tag>
-            
             <tag> kali </tag>
+            
+            <tag> 子域名 </tag>
             
         </tags>
       
@@ -324,9 +347,9 @@
       
         <tags>
             
-            <tag> 蛇形操作 </tag>
-            
             <tag> 环境优化 </tag>
+            
+            <tag> 蛇形操作 </tag>
             
         </tags>
       
